@@ -1,0 +1,561 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900');
+/*VARIABLES*/
+  /*COLORS*/
+$white-color: #fff;
+$bwhite-color: #f1f1f1;
+$rwhite-color: #ececec;
+$lgrey-color: #929292;
+$rgrey-color: #8b8b8b;
+$bgrey-color: #787878;
+$border-color: #e7e7e7;
+$orange-color: #f88b7d;
+$sky-color: #6dc5dd;
+$gb-color: #003d48;
+  /*SIZE*/
+
+.logo {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+  .logo-image {
+    display: inline-block;
+    height: 100px;
+    a {
+      img {
+        padding: 25px 15px 25px 30px;
+      }
+    }
+  }
+  .logo-name {
+    width: 120px;
+    height: 100px;
+    padding: 30px 0 0 0;
+    display: inline-block;
+    vertical-align: top;
+    span {
+      &:first-child {
+        font-size: 23.62px;
+        color: $gb-color;
+      }
+      &:nth-child(2){
+        font-size: 23.62px;
+        color: $orange-color;
+      }
+      &:last-child {
+        font-size: 13.62px;
+        letter-spacing: 0.5px;
+        color: $lgrey-color;
+      }
+    }
+  }
+}
+
+/*LAYOUT PARTS*/
+
+header
+  height: 500px
+  .menu
+    height: 100px
+    border: 0
+    border-top-left-radius: 6px
+    border-top-right-radius: 6px
+    background: $white-color
+    .logo
+      float: left
+      height: 100px
+      a
+        img
+          padding: 25px 15px 25px 30px
+    .sitename
+      float: left
+      width: 170px
+      height: 70px
+      padding: 28px 328px 2px 3px
+      #first
+        float: left
+        display: inline-block
+        line-height: 23.11px
+        font-size: 23.62px
+        color: $gb-color
+      #second
+        line-height: 23.11px
+        font-size: 23.62px
+        color: $orange-color
+      #sitecaption
+        font-size: 13.62px
+        letter-spacing: 0.5px
+        color: $lgrey-color
+    nav
+      display: inline-block
+      width: 570px
+      height: 100px
+      ul
+        height: 100px
+        margin: 0
+        padding: 0 0 0 20px
+        li
+          float: left
+          padding-right: 24px
+          list-style-type: none
+          &:first-child
+            padding-right: 25px
+            a
+              color: $sky-color
+            &::before
+              content: ''
+              padding-left: 0
+              border: none
+          &::before
+            content: ''
+            padding-right: 28px
+            border-left: solid $border-color 1px
+          a
+            line-height: 98px
+            font-size: 16px
+            letter-spacing: 0.55px
+            text-align: center
+            color: $bgrey-color
+            &:hover
+              color: $sky-color
+  .slider
+    position: relative
+    height: 400px
+    background: linear-gradient(to top, $white-color, $border-color)
+    .phonerighttext
+      position: absolute
+      top: 85px
+      left: 583px
+      #phonetextfirst
+        font-size: 31px
+        color: $gb-color
+      #phonetextsecond
+        margin: 12px 0 30px 0
+        font-size: 43px
+        text-transform: uppercase
+        color: $gb-color
+      #phonetextthird
+        font-size: 18px
+        line-height: 1.15
+        color: $rgrey-color
+      #slider-button
+        width: 130px
+        height: 45px
+        margin-top: 36px
+        line-height: 12px
+        font-size: 18px
+#phone
+  background: url(../img/phone.png) no-repeat 100px 100%
+
+.row1
+  height: 270px
+  background: $sky-color
+  .content
+    float: left
+    width: 370px
+    height: 270px
+    color: $white-color
+    &:last-child
+      padding-left: 30px
+    .content-image
+      float: left
+      position: relative
+      width: 100px
+      height: 270px
+    .content-text
+      float: left
+      width: 251px
+      height: 210px
+      padding: 58px 0 0 17px
+      line-height: 1.15
+      p:nth-child(2)
+        margin: 19px 0 19px 3px
+        line-height: 1.6
+        font-size: 15px
+      span
+        &:first-child
+          padding-left: 1px
+          font-size: 20px
+        &:nth-child(3)
+          padding-left: 3px
+          font-size: 16px
+        &:last-child
+          padding-left: 7px
+          font-family: FontAwesome, sans-serif
+          font-size: 15px
+#flag
+  background: url(../img/flag.png) no-repeat 28px 57px
+#camera
+  background: url(../img/camera.png) no-repeat 28px 57px
+#home
+  background: url(../img/home.png) no-repeat 28px 57px
+
+.row2
+  position: relative
+  height: 572px
+  background: $white-color
+  .person-all
+    float: left
+    display: inline-block
+    width: 800px
+    height: 574px
+    .person-line
+      width: 770px
+      height: 196px
+      margin: 0
+      padding: 60px 0 0 30px
+      .person-image
+        float: left
+        width: 189px
+        height: 196px
+      .person-text
+        float: left
+        width: 552px
+        height: 200px
+        padding-left: 28px
+        p:first-child
+          margin-top: 1px
+          -webkit-margin-before: 0
+          -webkit-margin-after: 0
+          -webkit-margin-start: 0
+          -webkit-margin-end: 0
+          font-size: 20px
+          color: $gb-color
+        p:nth-child(2)
+          margin: 18px 0 23px 1px
+          padding: 0 30px 0 0
+          font-size: 15px
+          line-height: 24px
+          letter-spacing: 0.04px
+          color: $rgrey-color
+        .person-button
+          width: 70px
+          height: 38px
+          margin-left: 2px
+          padding-left: 6px
+          font-size: 15px
+          line-height: 12px
+    &:last-child
+      .person-text
+        p:first-child
+          margin-bottom: 20px
+          font-size: 18px
+  .row2-right-block
+    float: left
+    display: inline-block
+    width: 370px
+    padding: 60px 0 0 0
+    .row2-box-title
+      width: 340px
+      height: 40px
+      .row2-box-title-item
+        float: left
+        position: relative
+        width: 95px
+        height: 40px
+        margin-right: 10px
+        padding-top: 1px
+        border: 2px solid $bwhite-color
+        border-bottom: 0
+        border-top-right-radius: 4px
+        border-top-left-radius: 4px
+        font-size: 16px
+        line-height: 42px
+        text-align: center
+        color: $bgrey-color
+    .row2-right-box
+      width: 336px
+      height: 152px
+      margin: 0 25px 0 0
+      border: 2px solid $bwhite-color
+      border-top-right-radius: 4px
+      background-color: $gb-color
+      color: $white-color
+      p
+        &:first-child
+          margin: 27px 0 0 30px
+          font-size: 20px
+          color: $sky-color
+        &:nth-child(2)
+          margin: 11px 25px 0 32px
+          line-height: 1.75
+          font-size: 14px
+          letter-spacing: 0.42px
+          color: $white-color
+    .row2-list
+      width: 336px
+      height: 233px
+      border: 2px solid $bwhite-color
+      border-top: none
+      border-bottom-left-radius: 4px
+      border-bottom-right-radius: 4px
+      ul
+        width: 280px
+        height: 170px
+        margin: 0
+        padding: 29px 39px 0 17px
+        list-style: none
+        li
+          padding-left: 15px
+          line-height: 35px
+          font-size: 14px
+          font-family: 'Source Sans Pro', sans-serif
+          font-weight: 600
+          border-bottom: 1px solid $rwhite-color
+          letter-spacing: 0.09px
+          color: $bgrey-color
+          &:last-child
+            border-bottom: none
+          &:before
+            content: "\f178"
+            font-family: FontAwesome, sans-serif
+            display: inline-block
+            width: 30px
+            color: $orange-color
+#checked
+  width: 102px
+  height: 40px
+  padding-left: 4px
+  border-bottom: none
+  background-color: $gb-color
+  color: $orange-color
+
+.row3-text
+  height: 151px
+  padding: 56px 250px 0 250px
+  text-align: center
+  background: $orange-color
+  color: $white-color
+  p
+    &:nth-child(1)
+      margin: 0
+      line-height: 28.8px
+      font-size: 32px
+    &:nth-child(2)
+      margin-top: 12px
+      line-height: 28.8px
+      font-size: 18px
+
+.row4
+  height: 645px
+  background: $white-color
+  .row4-content
+    width: 1110px
+    height: 645px
+    margin: 0 auto
+    .row4-title
+      padding: 54px 0 27px 0
+      border-bottom: 1px solid #dbdbdb
+      text-align: center
+      line-height: 28.8px
+      font-size: 32px
+      color: #003d48
+    .row4-description
+      height: 40px
+      padding: 10px 0 0 0
+      border-bottom: 1px solid #dbdbdb
+      text-align: center
+      font-size: 22px
+      line-height: 28.8px
+      color: $sky-color
+    .row4-left-block-module
+      display: inline-block
+      width: 570px
+      height: 390px
+      padding-top: 40px
+      .row4-left-block
+        float: left
+        width: 570px
+        height: 100px
+        padding-bottom: 47px
+        .row4-left-block-date
+          float: left
+          width: 70px
+          border-radius: 2px
+          text-align: center
+          background-color: $sky-color
+          div
+            color: $white-color
+            &:first-child
+              height: 31px
+              padding: 10px 2px 0 0
+              border-bottom: 1px solid $white-color
+              line-height: 20px
+              font-size: 35px
+            &:last-child
+              height: 25px
+              line-height: 25px
+              font-size: 17px
+        .row4-left-block-text
+          float: left
+          width: 470px
+          padding-left: 30px
+          span
+            &:nth-child(1)
+              font-size: 16px
+              color: $gb-color
+            &:nth-child(3)
+              vertical-align: sub
+              font-size: 14px
+              color: $orange-color
+            p
+              &:nth-child(4)
+                margin-right: 40px
+                margin-top: 10px
+                margin-bottom: 0
+                line-height: 24.8px
+                font-size: 15px
+                color: $bgrey-color
+                span
+                  padding-left: 10px
+                  font-size: 18px
+                  color: $orange-color
+    .row4-right-block-module
+      float: right
+      display: inline-block
+      width: 540px
+      height: 390px
+      padding: 40px 0 0 0
+      .row4-right-block
+        width: 540px
+        height: 173px
+        margin-bottom: 40px
+        border-radius: 2px
+        background-color: $rwhite-color
+        .row4-right-block-text
+          float: left
+          width: 339px
+          height: 136px
+          padding: 36px 0 0 30px
+          span:first-child
+            line-height: 24px
+            font-size: 15px
+            color: #8c9193
+          p:last-child
+            margin-top: 6px
+            line-height: 28.8px
+            font-size: 16px
+            color: $orange-color
+        .row4-right-block-image
+          float: left
+          width: 170px
+          height: 175px
+          background: url(../img/dialog.png) no-repeat 54% 49%
+
+footer
+  height: 325px
+  background: $sky-color
+  .footer-map
+    width: 1110px
+    height: 219px
+    margin: 0 auto
+    border-bottom: 1px solid #9fd9e9
+    .column
+      float: left
+      padding: 56px 0 0 0
+      color: $white-color
+      &:nth-child(1)
+        width: 220px
+        height: 165px
+      &:nth-child(2)
+        width: 180px
+        height: 165px
+      &:nth-child(3)
+        width: 210px
+        height: 165px
+      &:nth-child(4)
+        width: 200px
+        height: 165px
+      &:nth-child(5)
+        width: 172px
+        height: 165px
+      &:nth-child(6)
+        width: 128px
+        height: 165px
+      p:first-child
+        margin: 0 0 10px 0
+        font-size: 20px
+        letter-spacing: 1px
+      span:last-child
+        line-height: 27.2px
+        font-size: 14px
+        letter-spacing: 0.6px
+  .footer-rights
+    width: 1110px
+    height: 104px
+    margin: 0 auto
+    .text-rights
+      float: left
+      display: inline-block
+      width: 1014px
+      margin: 0 0 0 2px
+      line-height: 93px
+      font-size: 15px
+      letter-spacing: 0.04px
+      color: $white-color
+    .icons
+      display: inline-block
+      width: 94px
+      height: 104px
+      margin: 0
+      div
+        float: right
+        position: relative
+        width: 35px
+        height: 35px
+        margin-top: 30px
+        border-radius: 20px
+        background-color: $white-color
+        div
+            position: absolute
+            top: 25%
+            left: 35%
+        &:last-child
+          margin-right: 7px
+/*STYLES*/
+body
+  margin: 50px 0 105px 0
+  background: url(../img/main.jpg)
+
+a
+  text-decoration: none
+
+html
+  line-height: 1
+
+.wrapper
+  width: 1170px
+  margin: 0 auto
+
+.sanspro
+  font-family: 'Source Sans Pro', sans-serif
+
+.lato
+  font-family: 'Lato', sans-serif
+
+.awesome
+  font-family: FontAwesome, sans-serif
+
+.light
+  font-weight: 300
+
+.regular
+  font-weight: 400
+
+.bold
+  font-weight: 700
+
+.black
+  font-weight: 900
+
+.button
+  border: 0
+  border-radius: 2px
+  text-transform: uppercase
+  background-color: #f77462
+  color: #fff
+  &:active, &:focus
+    outline: -webkit-focus-ring-color auto 2px

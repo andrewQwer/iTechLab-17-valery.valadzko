@@ -1,0 +1,141 @@
+header {
+    height: 500px;
+}
+
+/*LOGO + NAVIGATION CONTAINER SASS*/
+header .menu {
+    height: 100px;
+    border: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background: #fff;
+}
+
+/*LOGO*/
+.menu .logo {
+    float: left;
+    height: 100px;
+}
+
+.logo a img {
+    padding: 25px 15px 25px 30px;
+}
+
+/*SITENAME AFTER LOGO*/
+.menu .sitename {
+    float: left;
+    width: 170px;
+    height: 70px;
+    padding: 28px 328px 2px 3px;
+}
+
+.sitename #first {
+    float: left;
+    display: inline-block;
+    line-height: 23.11px;
+    font-size: 23.62px;
+    color: #003d48;
+}
+
+.sitename #second {
+    line-height: 23.11px;
+    font-size: 23.62px;
+    color: #f88b7d;
+}
+
+.sitename #sitecaption {
+    font-size: 13.62px;
+    letter-spacing: 0.5px;
+    color: #929292;
+}
+
+/*NAVIGATION BOX*/
+nav {
+    display: inline-block;
+    width: 570px;
+    height: 100px;
+}
+
+nav ul {
+    height: 100px;
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+nav ul li {
+    float: left;
+    padding-right: 24px;
+    list-style-type: none;
+}
+
+nav ul li:first-child {
+    padding-right: 25px;
+    color: #6dc5dd;
+}
+
+nav ul li:first-child::before {
+    content: '';
+    padding-left: 0;
+    border: none;
+}
+
+nav ul li::before {
+    content: '';
+    padding-right: 28px;
+    border-left: solid #e7e7e7 1px;
+}
+
+nav ul li a {
+    line-height: 98px;
+    font-size: 16px;
+    letter-spacing: 0.55px;
+    text-align: center;
+    color: #787878;
+}
+
+nav ul li a:hover {
+    color: #6dc5dd;
+}
+
+/*SLIDER WITH PHONE AND BUTTON*/
+.slider {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(to top, #fff, #e7e7e7);
+}
+
+#phone {
+    background: url(../img/phone.png) no-repeat 100px 100%;
+}
+
+.slider .phonerighttext {
+    position: absolute;
+    top: 85px;
+    left: 583px;
+}
+
+.phonerighttext #phonetextfirst {
+    font-size: 31px;
+    color: #003d48;
+}
+
+.phonerighttext #phonetextsecond {
+    margin: 12px 0 30px 0;
+    font-size: 43px;
+    text-transform: uppercase;
+    color: #003d48;
+}
+
+.phonerighttext #phonetextthird {
+    font-size: 18px;
+    line-height: 1.15;
+    color: #8b8b8b;
+}
+
+.phonerighttext #slider-button {
+    width: 130px;
+    height: 45px;
+    margin-top: 36px;
+    line-height: 12px;
+    font-size: 18px;
+}

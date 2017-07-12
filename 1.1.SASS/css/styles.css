@@ -1,0 +1,74 @@
+/*FONTS SASS*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900');
+/*LAYOUT PARTS*/
+@import "header.css";
+@import "row1.css";
+@import "row2.css";
+@import "row3.css";
+@import "row4.css";
+@import "footer.css";
+
+body {
+    margin: 50px 0 105px 0;
+    background: url(../img/main.jpg);
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    line-height: 1;
+}
+
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.sanspro {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.awesome {
+    font-family: FontAwesome, sans-serif;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.black {
+    font-weight: 900;
+}
+
+.button {
+    border: 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+    background-color: #f77462;
+    color: #fff;
+
+}
+
+.button:active {
+    outline: -webkit-focus-ring-color auto 2px;
+
+}
+
+.button:focus {
+    outline: -webkit-focus-ring-color auto 2px;
+}

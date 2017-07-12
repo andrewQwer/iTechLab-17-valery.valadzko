@@ -1,0 +1,114 @@
+footer {
+    height: 325px;
+    background: #6dc5dd;
+}
+
+/*FOOTER WRAPPER SASS*/
+footer > .footer-map {
+    width: 1110px;
+    height: 219px;
+    margin: 0 auto;
+    border-bottom: 1px solid #9fd9e9;
+}
+
+/*COLUMNS*/
+.footer-map > .column {
+    float: left;
+    padding: 56px 0 0 0;
+    color: #fff;
+}
+
+.column:nth-child(1) {
+    width: 220px;
+    height: 165px;
+}
+
+.column:nth-child(2) {
+    width: 180px;
+    height: 165px;
+}
+
+.column:nth-child(3) {
+    width: 210px;
+    height: 165px;
+}
+
+.column:nth-child(4) {
+    width: 200px;
+    height: 165px;
+}
+
+.column:nth-child(5) {
+    width: 172px;
+    height: 165px;
+}
+
+.column:nth-child(6) {
+    width: 128px;
+    height: 165px;
+}
+
+.column p:first-child {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.column span:last-child {
+    line-height: 27.2px;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+}
+
+/*RIGHTS + ICONS*/
+footer > .footer-rights {
+    width: 1110px;
+    height: 104px;
+    margin: 0 auto;
+}
+
+/*RIGHTS*/
+.footer-rights .text-rights {
+    float: left;
+    display: inline-block;
+    width: 1014px;
+    margin: 0 0 0 2px;
+    line-height: 93px;
+    font-size: 15px;
+    letter-spacing: 0.04px;
+    color: #fff;
+}
+
+/*ICONS*/
+.footer-rights .icons {
+    display: inline-block;
+    width: 94px;
+    height: 104px;
+    margin: 0;
+}
+
+.icons > div {
+    float: right;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.icons > div:last-child {
+    margin-right: 7px;
+}
+
+.icons > div > div:first-child {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+}
+
+.icons > div > div {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+}
