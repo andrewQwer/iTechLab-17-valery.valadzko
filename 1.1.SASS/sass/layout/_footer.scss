@@ -1,0 +1,51 @@
+/*FOOTER*/
+footer {
+  height: 325px;
+  background: $sky-color;
+  .footer__columns {
+    width: 1110px;
+    height: 219px;
+    margin: 0 auto;
+    border-bottom: 1px solid #9fd9e9;
+  }
+  .footer__rights {
+    width: 1110px;
+    height: 104px;
+    margin: 0 auto;
+    .footer__rights_text {
+      @extend %sanspro, %regular;
+      float: left;
+      display: inline-block;
+      width: 1014px;
+      margin: 0 0 0 2px;
+      line-height: 93px;
+      font-size: 15px;
+      letter-spacing: 0.04px;
+      color: $white-color;
+    }
+    .footer__rights_icons {
+      float: right;
+      width: 94px;
+      height: 104px;
+      margin: 0;
+      div {
+        @extend %awesome;
+        display: inline-block;
+        float: right;
+        width: 35px;
+        height: 35px;
+        margin-top: 30px;
+        border-radius: 20px;
+        background-color: $white-color;
+        span:before {
+          line-height: 35px;
+          padding-left: 10px;
+          color: $sky-color;
+        }
+        &:last-child {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}

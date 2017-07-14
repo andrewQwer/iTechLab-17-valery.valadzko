@@ -1,0 +1,12 @@
+/*SECOND ROW*/
+.row-2 {
+  position: relative;
+  height: 572px;
+  background: $white-color;
+  .person-block {
+    float: left;
+    display: inline-block;
+    width: 800px;
+    height: 574px;
+  }
+}

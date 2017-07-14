@@ -1,0 +1,42 @@
+/*COLUMNS*/
+.column {
+  float: left;
+  padding: 56px 0 0 0;
+  color: $white-color;
+  &:nth-child(1) {
+    width: 220px;
+    height: 165px;
+  }
+  &:nth-child(2) {
+    width: 180px;
+    height: 165px;
+  }
+  &:nth-child(3) {
+    width: 210px;
+    height: 165px;
+  }
+  &:nth-child(4) {
+    width: 200px;
+    height: 165px;
+  }
+  &:nth-child(5) {
+    width: 172px;
+    height: 165px;
+  }
+  &:nth-child(6) {
+    width: 128px;
+    height: 165px;
+  }
+  p:first-child {
+    @extend %sanspro, %bold;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  span:last-child {
+    @extend %sanspro, %regular;
+    line-height: 27.2px;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+  }
+}

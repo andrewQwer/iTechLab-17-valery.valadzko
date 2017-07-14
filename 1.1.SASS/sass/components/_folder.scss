@@ -1,0 +1,94 @@
+/*RIGHT BLOCK ROW2*/
+.folder {
+  float: left;
+  display: inline-block;
+  width: 370px;
+  padding: 60px 0 0 0;
+  .folder__box-title {
+    width: 340px;
+    height: 40px;
+    .folder__box-title__item {
+      @extend %sanspro, %bold;
+      float: left;
+      position: relative;
+      width: 95px;
+      height: 40px;
+      margin-right: 10px;
+      padding-top: 1px;
+      border: 2px solid $bwhite-color;
+      border-bottom: 0;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+      font-size: 16px;
+      line-height: 42px;
+      text-align: center;
+      color: $bgrey-color;
+    }
+    .folder__box-title__item_checked {
+      width: 102px;
+      height: 40px;
+      padding-left: 4px;
+      border-bottom: none;
+      background-color: $gb-color;
+      color: $orange-color;
+    }
+  }
+  .folder__box-main {
+    width: 336px;
+    height: 152px;
+    margin: 0 25px 0 0;
+    border: 2px solid $bwhite-color;
+    border-top-right-radius: 4px;
+    background-color: $gb-color;
+    color: $white-color;
+    p {
+      &:first-child {
+        @extend %sanspro, %bold;
+        margin: 27px 0 0 30px;
+        font-size: 20px;
+        color: $sky-color;
+      }
+      &:nth-child(2) {
+        @extend %sanspro, %regular;
+        margin: 11px 25px 0 32px;
+        line-height: 1.75;
+        font-size: 14px;
+        letter-spacing: 0.42px;
+        color: $white-color;
+      }
+    }
+  }
+  .folder__list {
+    width: 336px;
+    border: 2px solid $bwhite-color;
+    border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    ul {
+      width: 280px;
+      margin: 0;
+      padding: 29px 39px 30px 17px;
+      list-style: none;
+      li {
+        padding-left: 15px;
+        line-height: 35px;
+        font-size: 14px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 600;
+        border-bottom: 1px solid $rwhite-color;
+        letter-spacing: 0.09px;
+        color: $bgrey-color;
+        &:last-child {
+          border-bottom: none;
+        }
+        &:before {
+          content: "\f178";
+          font-family: FontAwesome, sans-serif;
+          display: inline-block;
+          width: 30px;
+          color: $orange-color;
+        }
+      }
+    }
+  }
+}

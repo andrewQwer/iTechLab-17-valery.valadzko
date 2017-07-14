@@ -1,0 +1,38 @@
+/*LOGO BLOCK*/
+.logo {
+  float: left;
+  display: inline-block;
+  width: 1170-570px;
+  height: 100px;
+  .logo__image {
+    display: inline-block;
+    height: 100px;
+    padding: 25px 15px 30px 30px;
+  }
+  .logo__name {
+    @extend %lato;
+    width: 120px;
+    height: 70px;
+    padding: 30px 0 0 0;
+    display: inline-block;
+    vertical-align: top;
+    span {
+      &:first-child {
+        @extend %black;
+        font-size: 23.62px;
+        color: $gb-color;
+      }
+      &:nth-child(2){
+        @extend %light;
+        font-size: 23.62px;
+        color: $orange-color;
+      }
+      &:last-child {
+        @extend %regular;
+        font-size: 13.62px;
+        letter-spacing: 0.5px;
+        color: $lgrey-color;
+      }
+    }
+  }
+}

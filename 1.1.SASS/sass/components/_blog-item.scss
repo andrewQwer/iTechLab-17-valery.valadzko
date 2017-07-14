@@ -1,0 +1,67 @@
+/*ROW WITH BLOG POST (ROW4)*/
+.blog-item {
+  float: left;
+  width: 570px;
+  height: 100px;
+  padding-bottom: 47px;
+  .blog-item__date {
+    float: left;
+    width: 70px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: $sky-color;
+    div {
+      @extend %sanspro, %black;
+      color: $white-color;
+      &:first-child {
+        height: 31px;
+        padding: 10px 2px 0 0;
+        border-bottom: 1px solid $white-color;
+        line-height: 20px;
+        font-size: 35px;
+      }
+      &:last-child {
+        height: 25px;
+        line-height: 25px;
+        font-size: 17px;
+      }
+    }
+  }
+  .blog-item__text {
+    float: left;
+    width: 470px;
+    padding-left: 30px;
+    span {
+      &:first-child {
+        @extend %sanspro, %bold;
+        font-size: 16px;
+        color: $gb-color;
+      }
+    }
+    a:nth-child(3){
+      span {
+        @extend %sanspro, %regular;
+        vertical-align: sub;
+        font-size: 14px;
+        color: $orange-color;
+      }
+    }
+    p {
+      &:nth-child(4) {
+        @extend %sanspro, %regular;
+        margin-right: 40px;
+        margin-top: 12px;
+        margin-bottom: 0;
+        line-height: 24.8px;
+        font-size: 15px;
+        color: $bgrey-color;
+        span {
+          @extend %awesome;
+          padding-left: 10px;
+          font-size: 18px;
+          color: $orange-color;
+        }
+      }
+    }
+  }
+}

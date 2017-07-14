@@ -1,0 +1,44 @@
+/*SLIDER BLOCK*/
+.slider {
+  position: relative;
+  height: 400px;
+  background: linear-gradient(to top, $white-color, $border-color);
+  .slider__phone-right-text {
+    position: absolute;
+    top: 85px;
+    left: 583px;
+    span:first-child {
+      @extend %sanspro, %light;
+      font-size: 31px;
+      color: $gb-color;
+    }
+    p:nth-child(3) {
+      @extend %sanspro, %black;
+      margin: 12px 0 30px 0;
+      font-size: 43px;
+      text-transform: uppercase;
+      color: $gb-color;
+    }
+    span:nth-child(4) {
+      @extend %sanspro, %regular;
+      font-size: 18px;
+      line-height: 1.15;
+      color: $rgrey-color;
+    }
+    a:nth-child(6) {
+      button {
+        @extend %sanspro, %regular;
+        width: 130px;
+        height: 45px;
+        margin-top: 36px;
+        line-height: 12px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.slider-second-background {
+  height: 400px;
+  background: url(../img/phone.png) no-repeat 100px 100%;
+}

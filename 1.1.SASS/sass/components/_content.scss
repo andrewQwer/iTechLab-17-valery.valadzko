@@ -1,0 +1,49 @@
+/*CONTENT BLOCK*/
+.content {
+  float: left;
+  width: 370px;
+  height: 270px;
+  color: $white-color;
+  &:last-child {
+    padding-left: 30px;
+  }
+  .content__image {
+    float: left;
+    position: relative;
+    width: 100px;
+    height: 270px;
+  }
+  .content__text {
+    float: left;
+    width: 251px;
+    height: 210px;
+    padding: 58px 0 0 17px;
+    line-height: 1.15;
+    p:nth-child(2) {
+      @extend %sanspro, %regular;
+      margin: 19px 0 19px 3px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+    a:nth-child(3){
+      span:first-child {
+        @extend %sanspro, %bold;
+        padding-left: 3px;
+        font-size: 16px;
+      }
+    }
+    span {
+      &:first-child {
+        @extend %sanspro, %bold;
+        padding-left: 1px;
+        font-size: 20px;
+      }
+
+      &:last-child {
+        padding-left: 7px;
+        font-family: FontAwesome, sans-serif;
+        font-size: 15px;
+      }
+    }
+  }
+}

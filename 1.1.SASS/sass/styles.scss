@@ -1,0 +1,40 @@
+@import "helpers/variables";
+@import "helpers/font";
+
+@import "components/logo";
+@import "components/buttons";
+@import "components/navigation";
+@import "components/slider";
+@import "components/content";
+@import "components/columns";
+@import "components/person";
+@import "components/folder";
+@import "components/blog-item";
+@import "components/quote";
+
+@import "layout/header";
+@import "layout/row1";
+@import "layout/row2";
+@import "layout/row3";
+@import "layout/row4";
+@import "layout/footer";
+
+
+body {
+  margin: 50px 0 105px 0;
+  background: url(../img/main.jpg);
+}
+
+a {
+  text-decoration: none;
+  color: $white-color;
+}
+
+html {
+  line-height: 1;
+}
+
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}

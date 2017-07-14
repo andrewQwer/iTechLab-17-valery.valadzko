@@ -1,0 +1,33 @@
+/*RIGHT BLOCK ROW4*/
+.quote {
+  width: 540px;
+  height: 173px;
+  margin-bottom: 40px;
+  border-radius: 2px;
+  background-color: $rwhite-color;
+  .quote__text {
+    float: left;
+    width: 339px;
+    height: 136px;
+    padding: 36px 0 0 30px;
+    span:first-child {
+      @extend %sanspro, %regular;
+      line-height: 24px;
+      font-size: 15px;
+      color: #8c9193;
+    }
+    p:last-child {
+      @extend %sanspro, %bold;
+      margin-top: 6px;
+      line-height: 28.8px;
+      font-size: 16px;
+      color: $orange-color;
+    }
+  }
+  .quote_image {
+    float: left;
+    width: 170px;
+    height: 175px;
+    background: url(../img/dialog.png) no-repeat 54% 49%;
+  }
+}
