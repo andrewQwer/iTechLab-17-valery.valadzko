@@ -1,0 +1,30 @@
+.arr-form .arr-form__main-block {
+  display: inline-block;
+  vertical-align: top; }
+  .arr-form .arr-form__main-block .arr-form__main-block__input {
+    display: block;
+    box-sizing: border-box;
+    width: 200px;
+    height: 25px; }
+  .arr-form .arr-form__main-block .arr-form__main-block__button {
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin: 5px auto; }
+  .arr-form .arr-form__main-block .arr-form__main-block__output {
+    width: 200px;
+    text-align: center; }
+.arr-form .arr-form__side-block {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 30px; }
+  .arr-form .arr-form__side-block .arr-form__side-block__button {
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin: 0 auto; }
+  .arr-form .arr-form__side-block .arr-form__side-block__output {
+    width: 200px;
+    text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
