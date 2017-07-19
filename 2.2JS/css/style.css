@@ -5,7 +5,8 @@
   .arr-form .arr-form__input {
     box-sizing: border-box;
     width: 200px;
-    height: 25px; }
+    height: 25px;
+    margin: 5px 0; }
   .arr-form .arr-form__button {
     display: block;
     width: 100px;
