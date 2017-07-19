@@ -1,0 +1,21 @@
+.arr-form {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px; }
+  .arr-form .arr-form__input {
+    box-sizing: border-box;
+    width: 200px;
+    height: 25px; }
+  .arr-form .arr-form__button {
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin: 5px auto; }
+
+.arr-form__output {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
