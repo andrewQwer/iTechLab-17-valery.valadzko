@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+}
+.arr-form {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+  text-align: -webkit-center;
+  .arr-form__option-oper {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+  }
+  .arr-form__option-num {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+  }
+  .arr-form__button {
+    display: block;
+    width: 200px;
+  }
+  .arr-form__output {
+    width: 300px;
+    text-align: left;
+    margin: 5px;
+  }
+}
+
