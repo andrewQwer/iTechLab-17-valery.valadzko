@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<form action="" class="arr-form">
+    <input type="text" id="text" class="arr-form__text" value="xxxx yyy zzzzz 666666 7777777 4444 999999999 ">
+    <input type="text" id="max-length" class="arr-form__option" value="15">String length
+    <input type="text" id="max-count" class="arr-form__option">String count
+    <div class="arr-form__description">String separator</div>
+    <input type="radio" name="separator" class="arr-form__radio" id="word" value="word" checked>
+    <label for="word">Word</label>
+    <input type="radio" name="separator" class="arr-form__radio" id="letter" value="letter">
+    <label for="letter">Letter</label>
+    <input type="radio" name="separator" class="arr-form__radio" id="sentence" value="sentence">
+    <label for="sentence">Sentence</label>
+    <input type="radio" name="separator" class="arr-form__radio" id="without" value="without">
+    <label for="without">Without</label>
+    <input type="button" id="text-formatter" value="Convert" class="arr-form__button"><br>
+    <div class="arr-form__output" id="output"></div>
+</form>
+</body>
+</html>
