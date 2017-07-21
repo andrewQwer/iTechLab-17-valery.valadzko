@@ -1,0 +1,28 @@
+* {
+  margin: 0; }
+
+.arr-form {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+  text-align: -webkit-center; }
+  .arr-form .arr-form__text {
+    display: block;
+    width: 300px;
+    margin: 5px 0; }
+  .arr-form .arr-form__option {
+    display: inline-block;
+    width: 40px;
+    margin: 5px 0; }
+  .arr-form .arr-form__description {
+    display: block;
+    width: 200px; }
+  .arr-form .arr-form__button {
+    display: block;
+    width: 200px; }
+  .arr-form .arr-form__output {
+    width: 300px;
+    text-align: left;
+    margin: 5px; }
+
+/*# sourceMappingURL=style.css.map */
