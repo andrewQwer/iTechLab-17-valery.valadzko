@@ -6,7 +6,7 @@ window.onload = function () {
     document.getElementById('buttonD').onclick = d;
 };
 var arr = [];
-var type = new ArrSort;
+var type = new ArrSort();
 var result;
 function createRandomArray () {
     arr = [];
@@ -75,7 +75,9 @@ function ArrSort() {
         for (var i = 0; i < n - 1; i++) {
             var min = i;
             for (var j = i + 1; j < n; j++) {
-                if (arr[j] < arr[min]) min = j;
+                if (arr[j] < arr[min]) {
+                    min = j;
+                }
             }
             var t = arr[min];
             arr[min] = arr[i];
@@ -111,5 +113,5 @@ function ArrSort() {
             i++;
         }
         return arr;
-    }
+    };
 }

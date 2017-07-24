@@ -1,5 +1,5 @@
 window.onload = function () {
-  document.getElementById('bin-convert').onclick = binConvert
+  document.getElementById('bin-convert').onclick = binConvert;
 };
 
 function binConvert() {
