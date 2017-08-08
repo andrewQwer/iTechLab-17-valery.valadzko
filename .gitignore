@@ -2,8 +2,9 @@
 1.HTML CSS/.idea/*
 1/*
 node_modules/*
-bower.json
-gulpfile.js
-package.json
-package-lock.json
 .idea/*
+Webpack
+ticket-app/node_modules/*
+ticket-app/.idea/*
+ticket-app/example/*
+ticket-app/dist/*
