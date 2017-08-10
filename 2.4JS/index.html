@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 <form action="" class="arr-form">
-    <input type="text" id="a" class="arr-form__option-num">
-    <input type="text" id="operation" class="arr-form__option-oper">
-    <input type="text" id="b" class="arr-form__option-num">
+    <div class="arr-form__title">Для ввода отрицательного числа оберните его в скобки</div>
+    <input type="text" id="expression" class="arr-form__option-num" value="(-9)/3+5-3+7-4-2*3*(-4)*7">
     <input type="button" id="count" value="Count" class="arr-form__button"><br>
     <div class="arr-form__output" id="output"></div>
 </form>
+<script src="js/main.js"></script>
 </body>
 </html>
