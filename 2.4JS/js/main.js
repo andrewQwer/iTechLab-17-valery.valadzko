@@ -75,5 +75,5 @@ function stringCalculator () {
       console.log('arrRes: ', arrRes);
     }
   }
-  $('#output').text(arrRes);
+  $('#output').text(isNaN(arrRes) ? 'Неверное выражение' : arrRes);
 }

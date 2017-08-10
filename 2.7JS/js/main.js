@@ -56,7 +56,7 @@ function Calculator () {
   console.log(objCache);
   this.multiply = function () {
     if (checkResult()) {
-      return result;
+      return result += ' from cache';
     } else {
       result = a * b;
       return cacheResult();
@@ -64,7 +64,7 @@ function Calculator () {
   };
   this.divide = function () {
     if (checkResult()) {
-      return result;
+      return result += ' from cache';
     } else {
       result = a / b;
       return cacheResult();
@@ -72,7 +72,7 @@ function Calculator () {
   };
   this.add = function () {
     if (checkResult()) {
-      return result;
+      return result += ' from cache';
     } else {
       result = a + b;
       return cacheResult();
@@ -80,7 +80,7 @@ function Calculator () {
   };
   this.subtract = function () {
     if (checkResult()) {
-      return result;
+      return result += ' from cache';
     } else {
       result = a - b;
       return cacheResult();
