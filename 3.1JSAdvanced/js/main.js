@@ -1,19 +1,19 @@
 // Partial application
-var G = function () {
+let G = (...arg) => {
   let result = '';
-  for (let i = 0; i < arguments.length; i++) {
-    result += ' ' + arguments[i];
+  for (let i of arg) {
+    result += ' ' + i;
   }
   return result;
 };
 
-var constr = function (fn, ...argArr1) {
-    return function (...argArr2) {
-        return fn.apply(this, argArr1.concat(argArr2));
-    };
+let constr = (fn, ...argArr1) => {
+  return (...argArr2) => {
+    return fn.apply(this, argArr1.concat(argArr2));
+  }
 };
 
-var F = constr(G, 2, 4);
+let F = constr(G, 2, 4);
 
 // alternative built-in
 // var F = G.bind(null, 4, 5);
