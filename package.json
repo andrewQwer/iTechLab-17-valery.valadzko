@@ -1,0 +1,53 @@
+{
+  "name": "valery",
+  "version": "1.0.0",
+  "description": "Web project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewQwer/iTechLab-17-valery.valadzko.git"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "css-loader": "^0.28.4",
+    "eslint": "^4.2.0",
+    "gulp": "^3.9.1",
+    "imagemin-pngquant": "^5.0.1",
+    "jquery": "^3.2.1",
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.5",
+    "jshint-loader": "^0.8.4",
+    "node-sass": "^4.5.3",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.6",
+    "standard": "^10.0.2",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "scripts": {
+    "test": "standard && node my-tests.js"
+  },
+  "bugs": {
+    "url": "https://github.com/andrewQwer/iTechLab-17-valery.valadzko/issues"
+  },
+  "homepage": "https://github.com/andrewQwer/iTechLab-17-valery.valadzko#readme",
+  "main": "gulpfile.js",
+  "author": "",
+  "license": "ISC"
+}

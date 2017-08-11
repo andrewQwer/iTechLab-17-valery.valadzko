@@ -16,4 +16,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Tickets)
+export default connect(mapStateToProps, null, null, {pure: false})(Tickets)

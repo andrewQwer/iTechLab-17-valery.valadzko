@@ -8,13 +8,17 @@ let updateCurrency = $('#update_currency');
 class Yahoo {
   constructor (type) {
     this.type = type;
+    self = this;
   }
+
   getUrlFromCity (callback) {
+    console.log('Type = ', this.type);
     switch (this.type) {
       case 'Weather': {
         var cityname = city.val();
         let location = 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + cityname + '") and u="c"';
         let url = 'https://query.yahooapis.com/v1/public/yql?q=' + location + '&format=json';
+        console.log(url);
         return callback(url);
       }
       case 'Currency': {
@@ -26,9 +30,10 @@ class Yahoo {
         break;
       }
     }
-  };
+  }
 
   requestJson (url, callback) {
+    console.log('Type = ', this.type);
     let xhr = new XMLHttpRequest();
     xhr.open('GET', url);
     xhr.send();
@@ -39,9 +44,10 @@ class Yahoo {
         return callback(jsonObj);
       }
     };
-  };
+  }
 
   setDom (jsonObj) {
+    console.log('Type = ', this.type);
     switch (this.type) {
       case 'Weather': {
         weatherDom.text(jsonObj.query.results.channel.item.condition.temp);
@@ -57,38 +63,21 @@ class Yahoo {
         break;
       }
     }
-  };
+  }
 
   runAsync () {
+    console.log('Type = ', this.type);
     self.getUrlFromCity(function (url) {
       self.requestJson(url, function (jsonObj) {
         self.setDom(jsonObj);
       });
     });
   }
+
 }
 
 let yahooWeather = new Yahoo('Weather');
 let yahooCurrency = new Yahoo('Currency');
-
-let runWeather = function() {
-  yahooWeather.getUrlFromCity(function (url) {
-    yahooWeather.requestJson(url, function (jsonObj) {
-      yahooWeather.setDom(jsonObj);
-    });
-  });
-};
-
-let runCurrency = function() {
-  yahooCurrency.getUrlFromCity(function (url) {
-    yahooCurrency.requestJson(url, function (jsonObj) {
-      yahooCurrency.setDom(jsonObj);
-    });
-  });
-};
-
-updateWeather.on('click', runWeather);
-updateCurrency.on('click', runCurrency);
 
 updateWeather.on('click', yahooWeather.runAsync);
 updateCurrency.on('click', yahooCurrency.runAsync);

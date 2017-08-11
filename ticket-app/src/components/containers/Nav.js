@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import {Link} from 'react-router-dom'
 
@@ -8,7 +8,16 @@ class Nav extends Component {
         return (
             <div className='navigation'>
                 <div className='navigation__logo'/>
-                <Link to='/register'>Register</Link>
+                <ul className="navigation__list">
+                    <li className="navigation__item"><Link to='/'>Home</Link></li>
+                    <li className="navigation__item"><Link to='/tickets'>Tickets</Link></li>
+                    <li className="navigation__item"><Link to='/register'>Register</Link></li>
+                    <li className="navigation__item"><Link to='/login'>Login</Link></li>
+                    <li className="navigation__item"><Link to='/user'>User</Link></li>
+                </ul>
+
+
+
                 {
                     this.loggedIn ?
                         <button className='navigation__button'>Log out</button>
@@ -26,4 +35,4 @@ function mapStateToProps(state) {
     return state
 }
 
-export default connect(mapStateToProps)(Nav)
+export default connect(mapStateToProps, null, null, {pure: false})(Nav)

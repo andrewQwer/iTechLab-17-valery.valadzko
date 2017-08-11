@@ -1,0 +1,20 @@
+{
+  "name": "valery",
+  "description": "Web project",
+  "main": "",
+  "authors": [
+    "valeryvaladzko <hwoarangfreak@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/andrewQwer/iTechLab-17-valery.valadzko",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+  "dependencies": {
+
+  }
+}
