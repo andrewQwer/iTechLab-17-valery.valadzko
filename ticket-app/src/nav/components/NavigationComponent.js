@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
-import { connect } from 'react-redux'
 import {Link} from 'react-router-dom'
-import { logOut } from '../actions/LoginActions'
 
-class Nav extends Component {
+export default class Nav extends Component {
     render() {
         return (
             <div className='main-app'>
@@ -20,24 +18,10 @@ class Nav extends Component {
                                 :
                                 <li className='navigation__item'><Link to='/login'>Log in</Link></li>
                         }
-                        </ul>
+                    </ul>
                 </header>
                 <div className='frame'>{this.props.children}</div>
             </div>
         )
     }
 }
-
-function mapStateToProps(state) {
-    return state.login;
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        logOut: () => {
-            dispatch(logOut())
-        }
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps, null, {pure: false})(Nav)

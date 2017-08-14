@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
-import { connect } from 'react-redux'
-import { logIn } from '../actions/LoginActions'
 
-class Login extends Component {
+export default class Login extends Component {
     render() {
         return (
             <div className='login'>
@@ -17,16 +15,3 @@ class Login extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return state.login;
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        logIn: () => {
-            dispatch(logIn())
-        }
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps, null, {pure: false})(Login)

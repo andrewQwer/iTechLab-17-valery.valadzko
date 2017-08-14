@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class UserCabinet extends Component {
+export default class Cabinet extends Component {
     render() {
         return (
             <div className='user-cabinet'>

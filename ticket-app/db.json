@@ -1,0 +1,70 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "name": "Batman vs. Superman",
+      "title": "Fearing that the actions of Superman are left unchecked, Batman takes on the Man of Steel, while the world wrestles with what kind of a hero it really needs.",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "Iron Man",
+      "title": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "The Avengers",
+      "title": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "Thor",
+      "title": "The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "Iron Man Three",
+      "title": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "Captain America: The First Avenger",
+      "title": "Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a 'Super-Soldier serum'. But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "",
+      "title": "",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "",
+      "title": "",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "",
+      "title": "",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "",
+      "title": "",
+      "price": "5$"
+    },
+    {
+      "id": 1,
+      "name": "",
+      "title": "",
+      "price": "5$"
+    }
+  ]
+}

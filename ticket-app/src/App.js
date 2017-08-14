@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom';
-import Nav from './Nav'
-import Tickets from './Tickets'
-import Register from './Register'
-import Login from './Login'
-import UserCabinet from './UserCabinet'
+import Nav from './nav/containers/NavigationContainer'
+import Tickets from './tickets/containers/TicketsContainer'
+import Register from './register/containers/RegisterContainer'
+import Login from './login/containers/LoginContainer'
+import UserCabinet from './cabinet/containers/CabinetContainer'
 
 
 export default (
