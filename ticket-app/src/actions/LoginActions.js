@@ -1,9 +1,14 @@
 import * as actions from '../constants/Login'
 
-export function authUserSuccess(user) {
+export function logOut() {
     return {
-        action: actions.AUTH_SUCCESS,
-        user
+        type: actions.LOG_OUT,
+        payload: false
     }
 }
-
+export function logIn() {
+    return {
+        type: actions.LOG_IN,
+        payload: true
+    }
+}

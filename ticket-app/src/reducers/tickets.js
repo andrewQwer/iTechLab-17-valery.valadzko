@@ -25,7 +25,7 @@ const initialState = {
             name: 'To England',
         }
     ]
-}
+};
 
 export default function tickets(state = initialState) {
     return state;
