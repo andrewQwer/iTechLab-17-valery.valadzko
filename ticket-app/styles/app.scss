@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
+  background: #e2e2e2;
   line-height: 1;
 }
 ol, ul {
@@ -129,7 +130,7 @@ table {
     width: 10%;
     height: 100%;
     display: inline-block;
-    background: url('http://i.imgur.com/fbME3nU.png') no-repeat;
+    background: url('http://i.imgur.com/fbME3nU.png') no-repeat #fff;
     background-size: contain;
   }
   &__button {
@@ -175,12 +176,53 @@ table {
 
 /*TICKETS PAGE*/
 .tickets {
+  padding: 10px;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
-  padding: 5% 0 0 10%;
-  &__list-item {
-    font-size: 30px;
-    font-family: 'Saira Extra Condensed', sans-serif;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  .tickets__box {
+    width: 70%;
+    padding: 10px 0;
+    margin: 0 auto;
+    &__left {
+      width: 30%;
+      height: 400px;
+      float: left;
+      overflow: hidden;
+      border-radius: 10px 0 0 10px;
+      background: transparent;
+      img {
+        width: 100%;
+        height: 400px;
+        position: relative;
+      }
+    }
+    &__right {
+      width: 70%;
+      float: left;
+      background: #fff;
+      height: 400px;
+      border-radius: 0 10px 10px 0;
+      padding: 30px 15px 0 40px;
+      box-sizing: border-box;
+      &__name {
+        font-size:40px;
+        letter-spacing:1px;
+      }
+      &__title {
+        margin-top: 10px;
+        letter-spacing:1px;
+        line-height:20px;
+      }
+      &__price {
+        margin-top: 10px;
+        font-size:20px;
+      }
+      &__count {
+        font-size:20px;
+      }
+    }
   }
 }
 

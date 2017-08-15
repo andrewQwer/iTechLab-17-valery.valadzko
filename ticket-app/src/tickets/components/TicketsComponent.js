@@ -8,7 +8,6 @@ export default class Tickets extends React.Component {
     }
 
     componentDidMount() {
-        console.log('FUCKING TICKETS!!!', this.props)
         this.props.getTickets();
     }
 
@@ -17,9 +16,7 @@ export default class Tickets extends React.Component {
             return null;
         } else {
             return (
-                <div className='tickets'>
                     <TicketsList tickets={this.props.tickets}/>
-                </div>
             );
         }
     }

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Login from '../components/LoginComponent'
-import { logIn } from '../actions/LoginActions'
+import { fetchLogin } from '../actions/LoginActions'
 
 function mapStateToProps(store) {
     return store
@@ -8,8 +8,8 @@ function mapStateToProps(store) {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        logIn: () => {
-            dispatch(logIn())
+        getAccess: (userName, password) => {
+            dispatch(fetchLogin(userName, password))
         }
     }
 };
