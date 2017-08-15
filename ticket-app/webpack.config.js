@@ -20,6 +20,15 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
     ],
+    resolve: {
+        alias: {
+            Nav: path.resolve(__dirname, 'src/nav/'),
+            Login: path.resolve(__dirname, 'src/login/'),
+            Register: path.resolve(__dirname, 'src/register/'),
+            Cabinet: path.resolve(__dirname, 'src/cabinet/'),
+            Tickets: path.resolve(__dirname, 'src/tickets/')
+        }
+    },
     module: { //Обновлено
         loaders: [ //добавили babel-loader
             {

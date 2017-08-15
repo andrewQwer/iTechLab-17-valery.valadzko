@@ -1,12 +1,10 @@
 import { connect } from 'react-redux'
-import { logOut } from '../actions/NavigationActions'
+import { logOut } from 'Login/actions/LoginActions'
 import Nav from '../components/NavigationComponent'
 
 
 function mapStateToProps(store) {
-    return {
-        loggedIn: store.navReducer.loggedIn
-    }
+    return store
 }
 
 const mapDispatchToProps = (dispatch) => {

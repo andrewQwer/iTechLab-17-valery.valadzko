@@ -1,10 +1,10 @@
 import * as actions from './NavigationConst'
 import axios from 'axios'
 
-export function logOut() {
+export function logInNav() {
     return {
-        type: actions.LOG_OUT,
-        payload: false
+        type: actions.LOG_IN_NAV,
+        payload: true
     }
 }
 
