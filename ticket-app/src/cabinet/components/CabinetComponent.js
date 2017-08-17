@@ -5,10 +5,10 @@ export default class Cabinet extends Component {
         return (
             <div className='user-cabinet'>
                 <span className='user-cabinet__title'>Личный кабинет</span>
-                <div className='user-cabinet__name'/>
-                <div className='user-cabinet__second-name'/>
-                <div className='user-cabinet__email'/>
-                <div className='user-cabinet__ip'/>
+                <div className='user-cabinet__name'>{this.props.loginReducer.firstname}</div>
+                <div className='user-cabinet__second-name'>{this.props.loginReducer.secondname}</div>
+                <div className='user-cabinet__email'>{this.props.loginReducer.email}</div>
+                <div className='user-cabinet__ip'></div>
             </div>
         )
     }

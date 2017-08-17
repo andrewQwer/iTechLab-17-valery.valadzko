@@ -4,10 +4,21 @@ import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
 import App from './App'
 import '../styles/app.css'
+import { AppContainer } from 'react-hot-loader'
 
 const store = configureStore();
 
 render(
-  <Provider store={store}>{App}</Provider>,
-  document.getElementById('root')
+    <AppContainer><Provider store={store}>{App}</Provider></AppContainer>,
+    document.getElementById('root')
 )
+
+if (module.hot) {
+    module.hot.accept('./App', () => {
+        const NextApp = require('./App').default;
+        render(
+            <AppContainer><Provider store={store}>{NextApp}</Provider></AppContainer>,
+            document.getElementById('root')
+        );
+    });
+}

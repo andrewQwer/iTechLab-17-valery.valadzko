@@ -1,19 +1,49 @@
 {
   "users": [
     {
+      "id": 1,
       "username": "admin",
       "password": "admin123",
-      "access": "admin"
+      "access": "admin",
+      "firstname": "John",
+      "secondname": "Smith",
+      "email": "john_smith@gmail.com"
     },
     {
+      "id": 2,
       "username": "user",
       "password": "user123",
-      "access": "user"
+      "access": "user",
+      "firstname": "Jimmy",
+      "secondname": "Garden",
+      "email": "jimmy_garden@mail.ru"
     },
     {
+      "id": 3,
       "username": "hello",
       "password": "world",
-      "access": "user"
+      "access": "user",
+      "firstname": "Hello",
+      "secondname": "World",
+      "email": "hello_world@helloworld.com"
+    },
+    {
+      "username": "hwoarang",
+      "password": "123",
+      "firstname": "Valery",
+      "secondname": "Volodko",
+      "email": "hwoarangfreak@gmail.com",
+      "access": "user",
+      "id": 4
+    },
+    {
+      "username": "Valery",
+      "password": "Volodko",
+      "firstname": "qwe",
+      "secondname": "wqeq",
+      "email": "eqweqw@mail.ru",
+      "access": "user",
+      "id": 5
     }
   ],
   "tickets": [
