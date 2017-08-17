@@ -134,6 +134,14 @@
       "price": "5$",
       "count": 16,
       "url": "https://images-na.ssl-images-amazon.com/images/M/MV5BZGY5Y2RjMmItNDg5Yy00NjUwLThjMTEtNDc2OGUzNTBiYmM1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    },
+    {
+      "name": "The Mechanic",
+      "title": "Follows an elite hit man as he teaches his trade to an apprentice who has a connection to one of his previous victims.",
+      "price": "5$",
+      "count": "12",
+      "url": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyMjk1NjI1M15BMl5BanBnXkFtZTcwODcyNjAxNA@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+      "id": 12
     }
   ]
 }

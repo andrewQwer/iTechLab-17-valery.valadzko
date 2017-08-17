@@ -15,8 +15,9 @@ export default class Tickets extends React.Component {
         if (this.props.tickets === undefined) {
             return null;
         } else {
+            console.log(this.props.tickets);
             return (
-                    <TicketsList tickets={this.props.tickets}/>
+                    <TicketsList tickets={this.props.tickets} addToCart={this.props.addToCart}/>
             );
         }
     }

@@ -5,7 +5,7 @@ import Tickets from './tickets/containers/TicketsContainer'
 import Register from './register/containers/RegisterContainer'
 import Login from './login/containers/LoginContainer'
 import UserCabinet from './cabinet/containers/CabinetContainer'
-
+import Shopping from './shopping-cart/containers/ShoppingContainer'
 
 export default (
         <BrowserRouter>
@@ -14,6 +14,7 @@ export default (
                     <Route exact path='/register' component={Register}/>
                     <Route exact path='/tickets' component={Tickets}/>
                     <Route exact path='/user' component={UserCabinet}/>
+                    <Route exact path='/cart' component={Shopping}/>
                     <Route exact path='/login' component={Login}/>
                 </Nav>
         </BrowserRouter>

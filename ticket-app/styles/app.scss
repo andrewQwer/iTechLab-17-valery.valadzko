@@ -48,7 +48,6 @@ table {
 
 /*APP*/
 #root {
-  width: 100vw;
   height: 100vh;
 }
 
@@ -179,23 +178,45 @@ table {
 .user-cabinet {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 300px;
+  height: 100%;
+  background: #fff;
+  margin: 20px;
   &__title {
+    padding-top: 20px;
     font-size: 25px;
     margin: 0 auto;
   }
-  &__name {
-    background-color: tomato;
+  &__item {
+    padding: 30px 0 0 50px;
+    color: grey;
+    font-weight: bold;
+    .variable {
+      color: #000;
+    }
   }
-  &__second-name {
-    background-color: chocolate;
-  }
-  &__email {
-    background-color: deepskyblue;
-  }
-  &__ip {
-    background-color: coral;
+  &__tickets-form {
+    padding: 20px 0 0 50px;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 420px;
+      padding-top: 20px;
+      div {
+        display: flex;
+        padding-bottom: 5px;
+        label {
+          width: 100px;
+        }
+        div {
+          input {
+            width: 200px;
+          }
+          span {
+            width: 100px;
+          }
+        }
+      }
+    }
   }
   div {
     height: 30px;
