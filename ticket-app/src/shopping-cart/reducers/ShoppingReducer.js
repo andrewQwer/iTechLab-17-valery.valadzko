@@ -1,19 +1,15 @@
 const initialState = {
+    cart: {}
 };
 
 export default function shoppingReducer(state = initialState, action) {
     switch (action.type) {
         case 'ADD_TO_CART': {
-            let temp;
-            console.log(action.totalCount);
-            if (state[action.id] === undefined) {
-                temp = 1;
-            } else if (action.totalCount === state[action.id].count) {
-                temp = state[action.id].count;
-            } else {
-                temp = state[action.id].count+1;
-            }
-            return {...state, [action.id]: {name: action.name, count: temp}}
+            let temp = {...state.cart, [action.id]: {id: action.id, name: action.name}};
+            return {...state, cart: temp}
+/*
+            return Object.assign({}, state, state.cart.push({id: action.id, name: action.name}));
+*/
         }
         default:
             return state;

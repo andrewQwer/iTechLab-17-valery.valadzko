@@ -4,13 +4,11 @@ export default function(props) {
     return (
         <div>
             {
-                props.shoppingReducer.map(ticket => {
+                props.cart.map(ticket => {
                 return (
                     <div key={ticket.id}>
+                        <div>{ticket.id}</div>
                         <div>{ticket.name}</div>
-                        <div>{ticket.title}</div>
-                        <div>Cost: {ticket.price}</div>
-                        <div>Current count: {ticket.count}</div>
                     </div>
                 );
             })

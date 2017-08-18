@@ -20,7 +20,6 @@ export function fetchTickets() {
         axios.get('http://localhost:3001/tickets')
             .then(
                 response => {
-                    console.log(response.data);
                     dispatch(getTickets(response.data))
                 }
             )
