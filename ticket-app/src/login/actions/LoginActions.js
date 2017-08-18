@@ -29,7 +29,6 @@ export function fetchLogin(userLogin, userPassword) {
                 password: userPassword,
             }})
             .then(response => {
-                console.log(response);
                 dispatch(logInSuccess(response.data['0']));
                 return 'success'
             })

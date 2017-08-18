@@ -10,9 +10,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getAccess: (userName, password) => {
             dispatch(fetchLogin(userName, password))
-                .then((response) => {
-                response === 'success' ? (console.log('Nice'))  : (console.log('Wrong'));
-                })
         }
     }
 };

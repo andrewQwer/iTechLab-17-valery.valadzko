@@ -276,6 +276,55 @@ table {
   }
 }
 
+.cart {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  .blue {
+    background: #6885aa;
+  }
+  .white {
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background: #fff;
+  }
+  &__items {
+    border: solid 1px black;
+    width: 80%;
+    &__title {
+      width: 100%;
+      div {
+        display: inline-block;
+      }
+      &__id {
+        width: 3%;
+      }
+      &__name {
+        width: 40%;
+      }
+      &__price {
+        width: 10%;
+      }
+      &__count {
+        width: 10%;
+      }
+      &_total {
+        width: 10%;
+      }
+      &__button {
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        border: none;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+
 .frame {
   display: block;
   width: 100%;

@@ -14,8 +14,10 @@ export default function(props) {
                             <div className='tickets__box__right__title'>{ticket.title}</div>
                             <div className='tickets__box__right__price'>Cost: {ticket.price}</div>
                             <div className='tickets__box__right__count'>Current count: {ticket.count}</div>
-                            <button className='tickets__box__right__button'
-                                    onClick={props.addToCart.bind(ticket, ticket.id, ticket.name, ticket.count)}>Add to cart</button>
+                            <button
+                                disabled={props.current[ticket.id] && props.current[ticket.id].count === props.tickets[ticket.id-1].count}
+                                className='tickets__box__right__button'
+                                onClick={props.addToCart.bind(ticket, ticket.id, ticket.name, ticket.count, ticket.price)}>Add to cart</button>
                         </div>
                     </div>
                 );

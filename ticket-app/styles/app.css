@@ -232,6 +232,42 @@ table {
       .tickets .tickets__box__right__count {
         font-size: 20px; }
 
+.cart {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center; }
+  .cart .blue {
+    background: #6885aa; }
+  .cart .white {
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background: #fff; }
+  .cart__items {
+    border: solid 1px black;
+    width: 80%; }
+    .cart__items__title {
+      width: 100%; }
+      .cart__items__title div {
+        display: inline-block; }
+      .cart__items__title__id {
+        width: 3%; }
+      .cart__items__title__name {
+        width: 40%; }
+      .cart__items__title__price {
+        width: 10%; }
+      .cart__items__title__count {
+        width: 10%; }
+      .cart__items__title_total {
+        width: 10%; }
+      .cart__items__title__button {
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        border: none;
+        border-radius: 10px; }
+
 .frame {
   display: block;
   width: 100%;

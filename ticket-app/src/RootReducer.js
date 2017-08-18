@@ -4,7 +4,7 @@ import ticketsReducer from './tickets/reducers/TicketsReducer'
 import loginReducer from './login/reducers/LoginReducer'
 import registerReducer from './register/reducers/RegisterReducer'
 import cabinetReducer from './cabinet/reducers/CabinetReducers'
-import shoppingReducer from './shopping-cart/reducers/ShoppingReducer'
+import cartReducer from './shopping-cart/reducers/CartReducer'
 import {reducer as formReducer} from 'redux-form'
 
 export default combineReducers({
@@ -13,6 +13,6 @@ export default combineReducers({
     loginReducer,
     registerReducer,
     cabinetReducer,
-    shoppingReducer,
+    cartReducer,
     form: formReducer
 })
