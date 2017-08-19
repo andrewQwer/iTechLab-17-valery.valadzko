@@ -17,9 +17,9 @@ export default class Nav extends Component {
                         }
                         {
                             !this.props.loginReducer.isAuth ?
-                                <li className='navigation__item'><Link to='/cart'>Cart</Link></li>
-                                :
                                 null
+                                :
+                                <li className='navigation__item'><Link to='/cart'>Cart</Link></li>
                         }
                         {
                             this.props.loginReducer.isAuth ?

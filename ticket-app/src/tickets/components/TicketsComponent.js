@@ -18,7 +18,7 @@ export default class Tickets extends React.Component {
             return null;
         } else {
             return (
-                    <TicketsList checkbox={this.checkbox} current={this.props.cart} tickets={this.props.tickets} addToCart={this.props.addToCart}/>
+                    <TicketsList isAuth={this.props.isAuth} checkbox={this.checkbox} current={this.props.cart} tickets={this.props.tickets} addToCart={this.props.addToCart}/>
             );
         }
     }

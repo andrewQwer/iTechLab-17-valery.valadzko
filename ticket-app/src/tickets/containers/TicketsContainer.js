@@ -6,7 +6,8 @@ import { addToCart } from 'Cart/actions/CartActions'
 function mapStateToProps(store) {
     return {
         tickets: store.ticketsReducer.tickets,
-        cart: store.cartReducer
+        cart: store.cartReducer,
+        isAuth: store.loginReducer.isAuth
     };
 }
 

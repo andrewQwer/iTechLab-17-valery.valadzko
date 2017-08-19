@@ -15,10 +15,28 @@ export default function cartReducer (state = initialState, action) {
                 };
         }
         case 'DECREMENT_COUNT':
-            console.log(action.id);
-            return {...state, totalCount: state.totalCount - 1};
+            return {
+                ...state,
+                [action.id]: {
+                    id: action.id,
+                    name: state[action.id].name,
+                    price: state[action.id].price,
+                    count: state[action.id].count - 1
+                }
+            };
         case 'INCREMENT_COUNT':
-            return {...state, totalCount: state.totalCount + 1};
+            return {
+                ...state,
+                [action.id]: {
+                    id: action.id,
+                    name: state[action.id].name,
+                    price: state[action.id].price,
+                    count: state[action.id].count + 1
+                }
+            };
+        case 'DELETE_CART_ITEM':
+            delete state[action.id];
+            return {...state};
         default:
             return state;
     }
