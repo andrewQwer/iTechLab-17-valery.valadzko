@@ -26,7 +26,10 @@ module.exports = {
             Register: path.resolve(__dirname, 'src/register/'),
             Cabinet: path.resolve(__dirname, 'src/cabinet/'),
             Tickets: path.resolve(__dirname, 'src/tickets/'),
-            Cart: path.resolve(__dirname, 'src/shopping-cart/')
+            Cart: path.resolve(__dirname, 'src/cart/'),
+            Store: path.resolve(__dirname, 'src/store/'),
+            Global: path.resolve(__dirname, 'src/global/'),
+            Home: path.resolve(__dirname, 'src/home/')
         }
     },
     module: { //Обновлено

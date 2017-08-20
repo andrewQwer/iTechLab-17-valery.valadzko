@@ -1,12 +1,5 @@
-import * as actions from './TicketsConst'
+import * as actions from 'Tickets/actions/TicketsConst'
 import axios from 'axios'
-
-export function logOut() {
-    return {
-        type: actions.LOG_OUT,
-        payload: false
-    }
-}
 
 function getTickets(json) {
     return {

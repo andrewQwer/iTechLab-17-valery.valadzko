@@ -4,7 +4,7 @@ const initialState = {
     isAuth: false
 };
 
-export default function loginReducer(state = initialState, action) {
+export default function user(state = initialState, action) {
     switch (action.type) {
         case 'LOG_IN_SUCCESS':
             return {...state,
@@ -26,6 +26,8 @@ export default function loginReducer(state = initialState, action) {
                 secondname: null,
                 email: null,
                 message: null};
+        case 'DELETE_MESSAGE':
+            return {...state, message: null};
         default:
             return state;
     }

@@ -1,4 +1,4 @@
-import * as actions from './CartConst'
+import * as actions from 'Cart/actions/CartConst'
 import axios from 'axios'
 
 export function addToCart(id, name, totalCount, price) {
@@ -25,7 +25,7 @@ export function decrementCount(id) {
     }
 }
 
-function deleteCartItem(id) {
+export function deleteCartItem(id) {
     return {
         type: actions.DELETE_CART_ITEM,
         id

@@ -25,7 +25,7 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  background: #e2e2e2;
+  background: #fff;
   line-height: 1; }
 
 ol, ul {
@@ -48,72 +48,39 @@ table {
 #root {
   height: 100vh; }
 
-.main-app {
+.frame {
+  display: block;
   width: 100%;
   height: 100%; }
 
-/*LOGIN PAGE*/
-.login {
-  width: 300px;
-  height: 150px;
-  border: 1px solid black;
-  border-radius: 5px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-  .login__input {
-    width: 70%;
-    display: block;
-    margin: 3px auto; }
-  .login__button-box__button {
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-  .login__button {
-    width: 35%; }
+.title {
+  margin: 0 auto;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  height: 12%; }
 
-/*REGISTRATION PAGE*/
-.registration {
-  width: 40%;
-  height: 30%;
-  border: 1px solid black;
-  border-radius: 5px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-  .registration__input {
-    margin: 0 0 5px 15px;
-    width: 50%;
-    display: inline-block; }
-  .registration__error-message {
-    display: inline-block;
-    color: red; }
-  .registration__button {
-    display: block;
-    width: 35%;
-    margin: 0 auto; }
+.app {
+  width: 100%;
+  height: 100%; }
 
+.submit {
+  background-color: #4CAF50; }
+
+.clear {
+  background-color: #6B9DDE; }
+
+button:hover {
+  cursor: pointer; }
+
+/*NAVIGATION*/
 .navigation {
   width: 100%;
   height: 15%;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  border-bottom: 1px solid #f4f5f7; }
   .navigation__list {
     display: flex;
     flex-direction: row;
@@ -153,47 +120,179 @@ table {
       text-align: center;
       text-decoration: none; }
 
-/*PERSONAL CABINET PAGE*/
-.user-cabinet {
+/*HOME PAGE*/
+.home {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 20px; }
+  .home__body {
+    padding: 20px 0 0 70px; }
+
+/*LOGIN PAGE*/
+.login {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background: #fff;
-  margin: 20px; }
-  .user-cabinet__title {
-    padding-top: 20px;
-    font-size: 25px;
-    margin: 0 auto; }
-  .user-cabinet__item {
-    padding: 30px 0 0 50px;
-    color: grey;
-    font-weight: bold; }
-    .user-cabinet__item .variable {
-      color: #000; }
-  .user-cabinet__tickets-form {
-    padding: 20px 0 0 50px; }
-    .user-cabinet__tickets-form form {
+  justify-content: baseline;
+  align-items: center; }
+  .login__form {
+    width: 30%;
+    height: 20%;
+    justify-content: center;
+    background-color: ghostwhite;
+    border: 1px solid darkgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 40px; }
+    .login__form__body {
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      width: 420px;
-      padding-top: 20px; }
-      .user-cabinet__tickets-form form div {
+      justify-content: center;
+      align-items: center; }
+      .login__form__body__input {
+        width: 60%;
+        display: block;
+        margin-bottom: 3px; }
+      .login__form__body__button-box__button {
+        width: 70%;
         display: flex;
-        padding-bottom: 5px; }
-        .user-cabinet__tickets-form form div label {
-          width: 100px; }
-        .user-cabinet__tickets-form form div div input {
-          width: 200px; }
-        .user-cabinet__tickets-form form div div span {
-          width: 100px; }
-  .user-cabinet div {
-    height: 30px; }
+        justify-content: space-around;
+        align-items: center; }
+      .login__form__body__button {
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        width: 30%;
+        height: 20%; }
+    .login__form__message {
+      height: 15%;
+      color: #D43C30; }
+
+/*REGISTRATION PAGE*/
+.registration {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center; }
+  .registration__form {
+    width: 80%;
+    height: 50%;
+    justify-content: center;
+    background-color: ghostwhite;
+    border: 1px solid darkgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 40px; }
+    .registration__form div {
+      margin-bottom: 5px; }
+    .registration__form__buttons-box {
+      display: flex;
+      width: 65%;
+      height: 10%;
+      justify-content: space-around; }
+      .registration__form__buttons-box__button {
+        border: none;
+        color: #fff;
+        width: 30%;
+        justify-content: space-around; }
+    .registration__form__input {
+      display: flex;
+      width: 65%; }
+      .registration__form__input__label {
+        width: 30%; }
+      .registration__form__input__body {
+        width: 70%; }
+        .registration__form__input__body__input {
+          width: 70%; }
+        .registration__form__input__body__message {
+          position: absolute;
+          left: 57%; }
+  .registration__input {
+    margin: 0 0 5px 15px;
+    width: 50%;
+    display: inline-block; }
+  .registration__error-message {
+    display: inline-block;
+    color: red; }
+  .registration__button {
+    display: block;
+    width: 35%;
+    margin: 0 auto; }
+
+/*PERSONAL CABINET PAGE*/
+.cabinet {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: #fff; }
+  .cabinet__body {
+    display: flex;
+    height: 100%;
+    width: 80%;
+    margin-top: 15px; }
+    .cabinet__body__left {
+      width: 30%; }
+      .cabinet__body__left__title-name {
+        font-size: 25px;
+        margin-bottom: 5px; }
+        .cabinet__body__left__title-name__title {
+          color: #342F30; }
+        .cabinet__body__left__title-name__data {
+          color: #000; }
+    .cabinet__body__right {
+      width: 70%; }
+      .cabinet__body__right__title {
+        font-size: 40px;
+        text-align: center; }
+      .cabinet__body__right__form {
+        width: 80%;
+        height: 70%;
+        justify-content: center;
+        background-color: ghostwhite;
+        border: 1px solid darkgrey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        margin: 5px auto; }
+        .cabinet__body__right__form div {
+          margin-bottom: 5px; }
+        .cabinet__body__right__form__buttons-box {
+          display: flex;
+          width: 65%;
+          height: 10%;
+          justify-content: space-around; }
+          .cabinet__body__right__form__buttons-box__button {
+            border: none;
+            color: #fff;
+            width: 30%;
+            justify-content: space-around; }
+        .cabinet__body__right__form__input {
+          display: flex;
+          width: 65%; }
+          .cabinet__body__right__form__input__label {
+            width: 30%; }
+          .cabinet__body__right__form__input__body {
+            width: 70%; }
+            .cabinet__body__right__form__input__body__input {
+              width: 70%; }
+            .cabinet__body__right__form__input__body__message {
+              position: absolute;
+              left: 57%; }
 
 /*TICKETS PAGE*/
 .tickets {
-  padding: 10px;
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
   font-family: 'Saira Extra Condensed', sans-serif; }
   .tickets .tickets__box {
@@ -212,9 +311,10 @@ table {
         height: 300px;
         position: relative; }
     .tickets .tickets__box__right {
+      position: relative;
       width: 70%;
       float: left;
-      background: #fff;
+      background-color: ghostwhite;
       height: 300px;
       border-radius: 0 10px 10px 0;
       padding: 30px 15px 0 40px;
@@ -231,14 +331,31 @@ table {
         font-size: 20px; }
       .tickets .tickets__box__right__count {
         font-size: 20px; }
+      .tickets .tickets__box__right__button {
+        position: absolute;
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        width: 20%;
+        left: 70%;
+        top: 85%;
+        height: 10%; }
+      .tickets .tickets__box__right__button:disabled {
+        background-color: #AF4E43; }
 
 .cart {
   display: flex;
   flex-direction: column;
   height: 100%;
-  align-items: center; }
+  align-items: center;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 20px; }
+  .cart__items:nth-child(2) {
+    border-radius: 5px 5px 0 0; }
+  .cart__items:last-child {
+    border-radius: 0 0 5px 5px; }
   .cart .blue {
-    background: #6885aa; }
+    background: #75a9aa; }
   .cart .white {
     border: none;
     border-left: 1px solid black;
@@ -248,9 +365,11 @@ table {
     border: solid 1px black;
     width: 80%; }
     .cart__items__title {
-      width: 100%; }
+      width: 100%;
+      padding-bottom: 3px; }
       .cart__items__title div {
-        display: inline-block; }
+        display: inline-block;
+        text-align: center; }
       .cart__items__title__id {
         width: 3%; }
       .cart__items__title__name {
@@ -259,18 +378,49 @@ table {
         width: 10%; }
       .cart__items__title__count {
         width: 10%; }
-      .cart__items__title_total {
-        width: 10%; }
+      .cart__items__title__total {
+        width: 5%; }
       .cart__items__title__button {
+        background-color: #4CAF50;
+        color: #fff;
         width: 15px;
         height: 15px;
         padding: 0;
         border: none;
-        border-radius: 10px; }
+        border-radius: 10px;
+        margin: 0 5px; }
+      .cart__items__title__button:focus {
+        outline: -webkit-focus-ring-color auto 0; }
+      .cart__items__title__button:disabled {
+        background-color: #AF4E43; }
+      .cart__items__title__buy {
+        margin-right: 3px;
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        width: 5%;
+        justify-content: space-around;
+        border-radius: 3px; }
+      .cart__items__title__delete {
+        margin-right: 3px;
+        background-color: #AF4E43;
+        border: none;
+        color: #fff;
+        width: 7%;
+        justify-content: space-around;
+        border-radius: 3px; }
 
-.frame {
-  display: block;
-  width: 100%;
-  height: 100%; }
+@media screen and (min-width: 1050px) {
+  .registration__form {
+    width: 50%; } }
+@media screen and (min-width: 1500px) {
+  .cabinet__body__right__form {
+    width: 60%; } }
+@media screen and (max-width: 1050px) {
+  .cabinet__body__right__form {
+    width: 100%; }
+
+  .cabinet__body {
+    width: 98%; } }
 
 /*# sourceMappingURL=app.css.map */

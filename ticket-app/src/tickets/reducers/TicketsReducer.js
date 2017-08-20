@@ -1,4 +1,5 @@
 const initialState = {
+
 };
 
 export default function tickets(state = initialState, action) {

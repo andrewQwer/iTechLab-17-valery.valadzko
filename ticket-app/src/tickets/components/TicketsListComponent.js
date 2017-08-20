@@ -15,6 +15,7 @@ export default function(props) {
                             <div className='tickets__box__right__title'>{ticket.title}</div>
                             <div className='tickets__box__right__price'>Cost: {ticket.price}</div>
                             <div className='tickets__box__right__count'>Current count: {ticket.count}</div>
+                            <div className='tickets__box__right__count'>Event time: {ticket.eventTime}</div>
                             {
                                 ticket.count === 0 ?
                                     <div className='tickets__box__right__price'>Not available</div>

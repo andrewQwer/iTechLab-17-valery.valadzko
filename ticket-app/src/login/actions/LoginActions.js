@@ -1,4 +1,4 @@
-import * as actions from '../actions/LoginConst'
+import * as actions from 'Login/actions/LoginConst'
 import axios from 'axios'
 
 export function logInSuccess(response) {
@@ -21,6 +21,12 @@ export function logOut() {
     }
 }
 
+export function deleteMessage() {
+    return {
+        type: actions.DELETE_MESSAGE
+    }
+}
+
 export function fetchLogin(userLogin, userPassword) {
     return dispatch => {
         return axios.get('http://localhost:3001/users', {
@@ -30,11 +36,9 @@ export function fetchLogin(userLogin, userPassword) {
             }})
             .then(response => {
                 dispatch(logInSuccess(response.data['0']));
-                return 'success'
             })
-            .catch(error => {
+            .catch(() => {
                 dispatch(logInFailed());
-                return error
             });
     };
 }

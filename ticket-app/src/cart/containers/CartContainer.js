@@ -1,14 +1,10 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import Cart from '../components/CartComponent'
-import {decrementCount, incrementCount, buyTickets} from '../actions/CartActions'
+import { Cart } from 'Cart/components/Cart'
+import {decrementCount, incrementCount, buyTickets, deleteCartItem} from 'Cart/actions/CartActions'
 
 class CartContainer extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     getArrObj(obj) {
         let arr = [];
         for (let i in obj) {
@@ -31,8 +27,6 @@ class CartContainer extends Component {
         let temp = this.getArrObj(this.props.cart);
         let total = this.getPriceCount(temp);
         return (
-            <div>
-            {
                 this.props.isAuth ?
                 <Cart
                     cart={temp}
@@ -41,21 +35,20 @@ class CartContainer extends Component {
                     decrementCount={this.props.decrementCount}
                     incrementCount={this.props.incrementCount}
                     buyTickets={this.props.buyTickets}
+                    deleteCartItem={this.props.deleteCartItem}
                     tickets={this.props.tickets}
                 />
                 :
                 <Redirect to={'/'}/>
-            }
-            </div>
         )
     }
 }
 
-function mapStateToProps(store) {
+function mapStateToProps(state) {
     return {
-        cart: store.cartReducer,
-        tickets: store.ticketsReducer.tickets,
-        isAuth: store.loginReducer.isAuth
+        cart: state.cart,
+        tickets: state.tickets.tickets,
+        isAuth: state.user.isAuth
     };
 }
 
@@ -69,6 +62,9 @@ function mapDispatchToProps(dispatch) {
         },
         buyTickets: (id, count) => {
             dispatch(buyTickets(id, count))
+        },
+        deleteCartItem: (id) => {
+            dispatch(deleteCartItem(id))
         }
     }
 }

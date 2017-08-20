@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartList = ({id, name, price, count, decrementCount, incrementCount, buyTickets, tickets}) => {
+export const CartItem = ({id, name, price, count, decrementCount, incrementCount, buyTickets, deleteCartItem, tickets}) => {
     return (
         <div className='cart__items__title'>
             <div className='cart__items__title__id'>{id}</div>
@@ -19,8 +19,7 @@ const CartList = ({id, name, price, count, decrementCount, incrementCount, buyTi
             </div>
             <div className='cart__items__title__total'>&#36;{price * count}</div>
             <button className='cart__items__title__buy' onClick={buyTickets.bind(this, id, count)}>Buy</button>
+            <button className='cart__items__title__delete' onClick={deleteCartItem.bind(this, id)}>Delete</button>
         </div>
     )
-}
-
-export default CartList;
+};

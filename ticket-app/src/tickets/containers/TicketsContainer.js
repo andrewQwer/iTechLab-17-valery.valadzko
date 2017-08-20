@@ -1,13 +1,36 @@
+import React  from 'react'
 import { connect } from 'react-redux'
-import Tickets from '../components/TicketsComponent'
-import { fetchTickets } from '../actions/TicketsActions'
+import { fetchTickets } from 'Tickets/actions/TicketsActions'
 import { addToCart } from 'Cart/actions/CartActions'
+import TicketsList from 'Tickets/components/TicketsListComponent'
+
+class Tickets extends React.Component {
+    constructor(props) {
+        super(props);
+        this.props = props;
+        this.checkbox = false;
+    }
+
+    componentWillMount() {
+        this.props.getTickets();
+    }
+
+    render() {
+        if (!this.props.tickets.tickets) {
+            return null;
+        } else {
+            return (
+                <TicketsList isAuth={this.props.isAuth} checkbox={this.checkbox} current={this.props.cart} tickets={this.props.tickets.tickets} addToCart={this.props.addToCart}/>
+            );
+        }
+    }
+}
 
 function mapStateToProps(store) {
     return {
-        tickets: store.ticketsReducer.tickets,
-        cart: store.cartReducer,
-        isAuth: store.loginReducer.isAuth
+        tickets: store.tickets,
+        cart: store.cart,
+        isAuth: store.user.isAuth
     };
 }
 

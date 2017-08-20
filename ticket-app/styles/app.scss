@@ -26,7 +26,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
-  background: #e2e2e2;
+  background: #fff;
   line-height: 1;
 }
 ol, ul {
@@ -50,83 +50,40 @@ table {
 #root {
   height: 100vh;
 }
-
-.main-app {
+.frame {
+  display: block;
   width: 100%;
   height: 100%;
 }
-/*LOGIN PAGE*/
-.login {
-  width: 300px;
-  height: 150px;
-  border: 1px solid black;
-  border-radius: 5px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  &__input {
-    width: 70%;
-    display: block;
-    margin: 3px auto;
-  }
-  &__button-box__button {
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  &__button {
-    width: 35%;
-  }
+.title {
+  margin: 0 auto;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  height: 12%;
+}
+.app {
+  width: 100%;
+  height: 100%;
+}
+.submit {
+  background-color: #4CAF50;
+}
+.clear {
+  background-color: #6B9DDE;
+}
+button:hover {
+  cursor: pointer;
 }
 
-/*REGISTRATION PAGE*/
-.registration {
-  width: 40%;
-  height: 30%;
-  border: 1px solid black;
-  border-radius: 5px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  &__input {
-    margin: 0 0 5px 15px;
-    width: 50%;
-    display: inline-block;
-  }
-  &__error-message {
-    display: inline-block;
-    color: red;
-  }
-  &__button {
-    display: block;
-    width: 35%;
-    margin: 0 auto;
-  }
-
-}
-
-
+/*NAVIGATION*/
 .navigation {
   width: 100%;
   height: 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #f4f5f7;
   &__list {
     display: flex;
     flex-direction: row;
@@ -174,61 +131,219 @@ table {
   }
 }
 
-/*PERSONAL CABINET PAGE*/
-.user-cabinet {
+/*HOME PAGE*/
+.home {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 20px;
+  &__body {
+    padding: 20px 0 0 70px;
+  }
+}
+/*LOGIN PAGE*/
+.login {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background: #fff;
-  margin: 20px;
-  &__title {
-    padding-top: 20px;
-    font-size: 25px;
-    margin: 0 auto;
-  }
-  &__item {
-    padding: 30px 0 0 50px;
-    color: grey;
-    font-weight: bold;
-    .variable {
-      color: #000;
-    }
-  }
-  &__tickets-form {
-    padding: 20px 0 0 50px;
-    form {
+  justify-content: baseline;
+  align-items: center;
+  &__form {
+    width: 30%;
+    height: 20%;
+    justify-content: center;
+    background-color: ghostwhite;
+    border: 1px solid darkgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 40px;
+    &__body {
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      width: 420px;
-      padding-top: 20px;
-      div {
+      justify-content: center;
+      align-items: center;
+      &__input {
+        width: 60%;
+        display: block;
+        margin-bottom: 3px;
+      }
+      &__button-box__button {
+        width: 70%;
         display: flex;
-        padding-bottom: 5px;
-        label {
-          width: 100px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      &__button {
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        width: 30%;
+        height: 20%;
+      }
+    }
+    &__message {
+      height: 15%;
+      color: #D43C30;
+    }
+  }
+}
+
+/*REGISTRATION PAGE*/
+.registration {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  &__form {
+    width: 80%;
+    height: 50%;
+    justify-content: center;
+    background-color: ghostwhite;
+    border: 1px solid darkgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 40px;
+    div {
+      margin-bottom: 5px;
+    }
+    &__buttons-box {
+      display: flex;
+      width: 65%;
+      height: 10%;
+      justify-content: space-around;
+      &__button {
+        border: none;
+        color: #fff;
+        width: 30%;
+        justify-content: space-around;
+      }
+    }
+    &__input {
+      display: flex;
+      width: 65%;
+      &__label {
+        width: 30%;
+      }
+      &__body {
+        width: 70%;
+        &__input {
+          width: 70%;
         }
+        &__message {
+          position: absolute;
+          left: 57%;
+        }
+      }
+    }
+  }
+  &__input {
+    margin: 0 0 5px 15px;
+    width: 50%;
+    display: inline-block;
+  }
+  &__error-message {
+    display: inline-block;
+    color: red;
+  }
+  &__button {
+    display: block;
+    width: 35%;
+    margin: 0 auto;
+  }
+
+}
+
+/*PERSONAL CABINET PAGE*/
+.cabinet {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: #fff;
+  &__body {
+    display: flex;
+    height: 100%;
+    width: 80%;
+    margin-top: 15px;
+    &__left {
+      width: 30%;
+      &__title-name {
+        font-size: 25px;
+        margin-bottom: 5px;
+        &__title {
+          color: #342F30;
+        }
+        &__data {
+          color: #000;
+        }
+      }
+    }
+    &__right {
+      width: 70%;
+      &__title {
+        font-size: 40px;
+        text-align: center;
+
+      }
+      &__form {
+        width: 80%;
+        height: 70%;
+        justify-content: center;
+        background-color: ghostwhite;
+        border: 1px solid darkgrey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        margin: 5px auto;
         div {
-          input {
-            width: 200px;
+          margin-bottom: 5px;
+        }
+        &__buttons-box {
+          display: flex;
+          width: 65%;
+          height: 10%;
+          justify-content: space-around;
+          &__button {
+            border: none;
+            color: #fff;
+            width: 30%;
+            justify-content: space-around;
           }
-          span {
-            width: 100px;
+        }
+        &__input {
+          display: flex;
+          width: 65%;
+          &__label {
+            width: 30%;
+          }
+          &__body {
+            width: 70%;
+            &__input {
+              width: 70%;
+            }
+            &__message {
+              position: absolute;
+              left: 57%;
+            }
           }
         }
       }
     }
   }
-  div {
-    height: 30px;
-  }
-
 }
 
 /*TICKETS PAGE*/
 .tickets {
-  padding: 10px;
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
   font-family: 'Saira Extra Condensed', sans-serif;
   .tickets__box {
@@ -249,9 +364,10 @@ table {
       }
     }
     &__right {
+      position: relative;
       width: 70%;
       float: left;
-      background: #fff;
+      background-color: ghostwhite;
       height: 300px;
       border-radius: 0 10px 10px 0;
       padding: 30px 15px 0 40px;
@@ -272,6 +388,19 @@ table {
       &__count {
         font-size:20px;
       }
+      &__button {
+        position: absolute;
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        width: 20%;
+        left: 70%;
+        top: 85%;
+        height: 10%;
+      }
+      &__button:disabled {
+        background-color: #AF4E43;
+      }
     }
   }
 }
@@ -281,8 +410,16 @@ table {
   flex-direction: column;
   height: 100%;
   align-items: center;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 20px;
+  &__items:nth-child(2) {
+    border-radius: 5px 5px 0 0;
+  }
+  &__items:last-child {
+    border-radius: 0 0 5px 5px;
+  }
   .blue {
-    background: #6885aa;
+    background: #75a9aa;
   }
   .white {
     border: none;
@@ -295,8 +432,10 @@ table {
     width: 80%;
     &__title {
       width: 100%;
+      padding-bottom: 3px;
       div {
         display: inline-block;
+        text-align: center;
       }
       &__id {
         width: 3%;
@@ -310,23 +449,63 @@ table {
       &__count {
         width: 10%;
       }
-      &_total {
-        width: 10%;
+      &__total {
+        width: 5%;
       }
       &__button {
+        background-color: #4CAF50;
+        color: #fff;
         width: 15px;
         height: 15px;
         padding: 0;
         border: none;
         border-radius: 10px;
+        margin: 0 5px;
+      }
+      &__button:focus {
+        outline: -webkit-focus-ring-color auto 0;
+      }
+      &__button:disabled {
+        background-color: #AF4E43;
+      }
+      &__buy {
+        margin-right: 3px;
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        width: 5%;
+        justify-content: space-around;
+        border-radius: 3px;
+      }
+      &__delete {
+        margin-right: 3px;
+        background-color: #AF4E43;
+        border: none;
+        color: #fff;
+        width: 7%;
+        justify-content: space-around;
+        border-radius: 3px;
       }
     }
   }
 }
 
+@media screen and (min-width: 1050px) {
+  .registration__form {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .cabinet__body__right__form {
+    width: 60%;
+  }
 
-.frame {
-  display: block;
-  width: 100%;
-  height: 100%;
+}
+@media screen and (max-width: 1050px){
+  .cabinet__body__right__form {
+    width: 100%;
+  }
+  .cabinet__body {
+    width: 98%;
+  }
 }
