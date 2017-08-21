@@ -98,7 +98,8 @@ button:hover {
     background-color: #fff;
     line-height: 15vh; }
     .navigation__item:hover {
-      background: #f4f5f7; }
+      background: #f4f5f7;
+      cursor: pointer; }
     .navigation__item a {
       display: block;
       position: relative;
@@ -413,6 +414,12 @@ button:hover {
 @media screen and (min-width: 1050px) {
   .registration__form {
     width: 50%; } }
+@media screen and (min-width: 1400px) {
+  .registration__form {
+    width: 40%; }
+
+  .login__form {
+    width: 20%; } }
 @media screen and (min-width: 1500px) {
   .cabinet__body__right__form {
     width: 60%; } }

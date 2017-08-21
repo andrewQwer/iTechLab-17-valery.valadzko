@@ -7,7 +7,6 @@ import TicketsList from 'Tickets/components/TicketsListComponent'
 class Tickets extends React.Component {
     constructor(props) {
         super(props);
-        this.props = props;
         this.checkbox = false;
     }
 
@@ -16,11 +15,16 @@ class Tickets extends React.Component {
     }
 
     render() {
-        if (!this.props.tickets.tickets) {
+        if (!this.props.tickets) {
             return null;
         } else {
             return (
-                <TicketsList isAuth={this.props.isAuth} checkbox={this.checkbox} current={this.props.cart} tickets={this.props.tickets.tickets} addToCart={this.props.addToCart}/>
+                <TicketsList
+                    isAuth={this.props.isAuth}
+                    checkbox={this.checkbox}
+                    current={this.props.cart}
+                    tickets={this.props.tickets}
+                    addToCart={this.props.addToCart}/>
             );
         }
     }
@@ -28,7 +32,7 @@ class Tickets extends React.Component {
 
 function mapStateToProps(store) {
     return {
-        tickets: store.tickets,
+        tickets: store.tickets.tickets,
         cart: store.cart,
         isAuth: store.user.isAuth
     };

@@ -30,6 +30,7 @@ class Nav extends Component {
                                 :
                                 <NavItem value='Log in' addressTo='/login'/>
                         }
+                        <NavItem value='Test' addressTo='/test'/>
                     </ul>
                 </header>
                 {this.props.children}
