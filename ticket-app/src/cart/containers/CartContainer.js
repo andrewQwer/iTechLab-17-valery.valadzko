@@ -5,6 +5,10 @@ import { Cart } from 'Cart/components/Cart'
 import {decrementCount, incrementCount, buyTickets, deleteCartItem} from 'Cart/actions/CartActions'
 
 class CartContainer extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     getArrObj(obj) {
         let arr = [];
         for (let i in obj) {

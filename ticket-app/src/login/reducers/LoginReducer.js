@@ -1,3 +1,5 @@
+import * as types from 'Login/actions/LoginConst'
+
 const initialState = {
     username: null,
     access: 'watcher',
@@ -6,18 +8,18 @@ const initialState = {
 
 export default function user(state = initialState, action) {
     switch (action.type) {
-        case 'LOG_IN_SUCCESS':
+        case types.LOG_IN_SUCCESS:
             return {...state,
                 isAuth: true,
-                username: action.payload.username,
-                access: action.payload.access,
-                firstname: action.payload.firstname,
-                secondname: action.payload.secondname,
-                email: action.payload.email,
-                message: null};
-        case 'LOG_IN_FAILED':
-            return {...state, message: action.message};
-        case 'LOG_OUT':
+                username: action.payload.response.username,
+                access: action.payload.response.access,
+                firstname: action.payload.response.firstname,
+                secondname: action.payload.response.secondname,
+                email: action.payload.response.email,
+                message: action.payload.message};
+        case types.LOG_IN_FAILED:
+            return {...state, message: action.payload.message};
+        case types.LOG_OUT:
             return {...state,
                 isAuth: false,
                 username: null,
@@ -26,7 +28,7 @@ export default function user(state = initialState, action) {
                 secondname: null,
                 email: null,
                 message: null};
-        case 'DELETE_MESSAGE':
+        case types.DELETE_MESSAGE:
             return {...state, message: null};
         default:
             return state;

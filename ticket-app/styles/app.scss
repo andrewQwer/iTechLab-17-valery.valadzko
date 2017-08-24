@@ -308,6 +308,11 @@ button:hover {
         div {
           margin-bottom: 5px;
         }
+        &__message {
+          color: coral;
+          font-size: 25px;
+          margin-top: 5px;
+        }
         &__buttons-box {
           display: flex;
           width: 65%;

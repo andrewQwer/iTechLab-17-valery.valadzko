@@ -1,29 +1,20 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
-import axios from 'axios'
 import AddTicketsForm from 'Cabinet/components/AddTicketsForm'
 import { TitleData } from 'Cabinet/components/TitleData'
 import {Title} from 'Global/Components'
+import { ADMIN } from 'Cabinet/actions/CabinetConst'
+import { addTicket, deleteCabinetMessage } from 'Cabinet/actions/CabinetActions'
 
 class Cabinet extends Component {
-    addTicket(values) {
-        axios.post('http://localhost:3001/tickets', {
-            name: values.name,
-            title: values.title,
-            price: values.price,
-            count: values.count,
-            eventTime: values.eventTime,
-            url: values.url
-        })
-            .then(() => {
-            return 'Success';
-            })
-            .catch((error) => {
-                return error
-            })
+    constructor(props) {
+        super(props);
+        this.handleSubmit = ::this.handleSubmit;
     }
-
+    handleSubmit(values) {
+        this.props.addTicket(values);
+    }
     render() {
         return (
             this.props.isAuth ?
@@ -31,15 +22,15 @@ class Cabinet extends Component {
                     <Title title='User cabinet'/>
                     <div className='cabinet__body'>
                         <div className='cabinet__body__left'>
-                        <TitleData name='cabinet__body__left' title='First name: ' data={this.props.firstName}/>
-                        <TitleData name='cabinet__body__left' title='Second name: ' data={this.props.secondName}/>
-                        <TitleData name='cabinet__body__left' title='E-mail: ' data={this.props.email}/>
+                        <TitleData title='First name: ' data={this.props.firstName}/>
+                        <TitleData title='Second name: ' data={this.props.secondName}/>
+                        <TitleData title='E-mail: ' data={this.props.email}/>
                         </div>
                         {
-                            this.props.access === 'admin' ?
+                            this.props.access === ADMIN ?
                                 <div className='cabinet__body__right'>
                                     <div className='cabinet__body__right__title'>Add new tickets</div>
-                                    <AddTicketsForm onSubmit={(values) => this.addTicket(values)}/>
+                                    <AddTicketsForm message={this.props.message} onSubmit={this.handleSubmit}/>
                                 </div>
                                 :
                                 null
@@ -60,8 +51,18 @@ function mapStateToProps(state) {
         firstName: state.user.firstname,
         secondName: state.user.secondname,
         email: state.user.email,
-        access: state.user.access
+        access: state.user.access,
+        message: state.cabinet.message
     }
 }
 
-export default connect(mapStateToProps, null, null, {pure: false})(Cabinet)
+function mapDispatchToProps(dispatch) {
+    return {
+        addTicket: (values) => {
+            dispatch(addTicket(values))
+                .then(setTimeout(() => dispatch(deleteCabinetMessage()), 5000))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps, null, {pure: false})(Cabinet)

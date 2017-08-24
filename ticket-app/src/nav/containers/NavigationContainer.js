@@ -19,10 +19,10 @@ class Nav extends Component {
                                 <NavItem value='Register' addressTo='/register'/>
                         }
                         {
-                            !this.props.isAuth ?
-                                null
-                                :
+                            this.props.isAuth ?
                                 <NavItem value='Cart' addressTo='/cart'/>
+                                :
+                                null
                         }
                         {
                             this.props.isAuth ?

@@ -18,13 +18,20 @@ class Tickets extends React.Component {
         if (!this.props.tickets) {
             return null;
         } else {
-            return (
-                <TicketsList
+            let nodes = this.props.tickets.map(ticket => {
+                return <TicketsList
                     isAuth={this.props.isAuth}
                     checkbox={this.checkbox}
                     current={this.props.cart}
-                    tickets={this.props.tickets}
-                    addToCart={this.props.addToCart}/>
+                    ticket={ticket}
+                    addToCart={this.props.addToCart}
+                    key={ticket.id}
+                />
+            })
+            return (
+                <div className='tickets'>
+                    {nodes}
+                </div>
             );
         }
     }

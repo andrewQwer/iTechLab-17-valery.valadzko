@@ -23,13 +23,14 @@ export const Cart = ({cart, totalCount, totalPrice, decrementCount, incrementCou
     ) : (
         <div>You didn't bought anything</div>
     );
-
+    const count = totalCount === 0 ? null : totalCount;
+    const price = totalPrice === 0 ? null : '$'+totalPrice;
     return (
         <div className='cart'>
             <Title title='Cart'/>
             <CartItemsTitle id='ID' filmName='Film name' price='Price' count='Count' total='Total' name='blue'/>
             <div className='cart__items white'>{items}</div>
-            <CartItemsTitle count={totalCount === 0 ? null : totalCount} total={totalPrice === 0 ? null : '$'+totalPrice} name='blue'/>
+            <CartItemsTitle count={count} total={price} name='blue'/>
         </div>
     )
 };

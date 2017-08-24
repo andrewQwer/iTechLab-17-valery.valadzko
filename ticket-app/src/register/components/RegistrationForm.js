@@ -41,5 +41,5 @@ const RegistrationForm = (props) => {
 }
 
 export default reduxForm({
-    form: 'registrationForm' // a unique identifier for this form
+    form: 'registrationForm'
 })(RegistrationForm)

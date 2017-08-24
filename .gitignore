@@ -8,3 +8,4 @@ ticket-app/node_modules/*
 ticket-app/.idea/*
 ticket-app/example/*
 ticket-app/dist/*
+*/.idea/*

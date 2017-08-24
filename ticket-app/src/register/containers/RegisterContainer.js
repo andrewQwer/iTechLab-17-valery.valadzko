@@ -7,6 +7,13 @@ import RegistrationForm from 'Register/components/RegistrationForm'
 import {Title} from 'Global/Components'
 
 class Register extends Component {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = ::this.handleSubmit;
+    }
+    handleSubmit(values) {
+        this.props.registerUser(values)
+    }
     render() {
         return (
             this.props.isAuth ?
@@ -14,7 +21,7 @@ class Register extends Component {
                 :
                 <div className='registration'>
                     <Title title='Registration'/>
-                    <RegistrationForm onSubmit={(values) => {this.props.registerUser(values)}}/>
+                    <RegistrationForm onSubmit={this.handleSubmit}/>
                 </div>
         )
     }

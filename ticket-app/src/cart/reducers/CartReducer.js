@@ -1,42 +1,44 @@
+import * as types from 'Cart/actions/CartConst'
+
 const initialState = {
 
 };
 
 export default function cart (state = initialState, action) {
     switch (action.type) {
-        case 'ADD_TO_CART': {
+        case types.ADD_TO_CART: {
                 return {
                     ...state,
-                    [action.id]: {
-                        id: action.id,
-                        name: action.name,
-                        price: action.price,
-                        count: state[action.id] ? state[action.id].count + 1 : 1
+                    [action.payload.id]: {
+                        id: action.payload.id,
+                        name: action.payload.name,
+                        price: action.payload.price,
+                        count: state[action.payload.id] ? state[action.payload.id].count + 1 : 1
                     }
                 };
         }
-        case 'DECREMENT_COUNT':
+        case types.DECREMENT_COUNT:
             return {
                 ...state,
-                [action.id]: {
-                    id: action.id,
-                    name: state[action.id].name,
-                    price: state[action.id].price,
-                    count: state[action.id].count - 1
+                [action.payload.id]: {
+                    id: action.payload.id,
+                    name: state[action.payload.id].name,
+                    price: state[action.payload.id].price,
+                    count: state[action.payload.id].count - 1
                 }
             };
-        case 'INCREMENT_COUNT':
+        case types.INCREMENT_COUNT:
             return {
                 ...state,
-                [action.id]: {
-                    id: action.id,
-                    name: state[action.id].name,
-                    price: state[action.id].price,
-                    count: state[action.id].count + 1
+                [action.payload.id]: {
+                    id: action.payload.id,
+                    name: state[action.payload.id].name,
+                    price: state[action.payload.id].price,
+                    count: state[action.payload.id].count + 1
                 }
             };
-        case 'DELETE_CART_ITEM':
-            delete state[action.id];
+        case types.DELETE_CART_ITEM:
+            delete state[action.payload.id];
             return {...state};
         default:
             return state;

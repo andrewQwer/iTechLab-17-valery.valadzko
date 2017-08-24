@@ -1,44 +1,49 @@
-import * as actions from 'Login/actions/LoginConst'
+import * as types from 'Login/actions/LoginConst'
+import { redirect } from 'Store/RouterAction'
 import axios from 'axios'
+
 
 export function logInSuccess(response) {
     return {
-        type: actions.LOG_IN_SUCCESS,
-        payload: response,
+        type: types.LOG_IN_SUCCESS,
+        payload: { response, message: 'Success login' }
     }
 }
 
 export function logInFailed() {
     return {
-        type: actions.LOG_IN_FAILED,
-        message: 'Wrong username or password'
+        type: types.LOG_IN_FAILED,
+        payload: { message: 'Wrong username or password' }
     }
 }
 
 export function logOut() {
     return {
-        type: actions.LOG_OUT,
+        type: types.LOG_OUT,
     }
 }
 
 export function deleteMessage() {
     return {
-        type: actions.DELETE_MESSAGE
+        type: types.DELETE_MESSAGE
     }
 }
 
 export function fetchLogin(userLogin, userPassword) {
     return dispatch => {
-        return axios.get('http://localhost:3001/users', {
+        return axios.get('http://192.168.14.142:3001/users', {
             params: {
                 username: userLogin,
                 password: userPassword,
             }})
             .then(response => {
-                dispatch(logInSuccess(response.data['0']));
+                response.data.length === 0 ?
+                    dispatch(logInFailed())
+                    :
+                    dispatch(logInSuccess(response.data['0']))
             })
-            .catch(() => {
-                dispatch(logInFailed());
-            });
+            .catch((error) => {
+                console.log(error);
+            })
     };
 }

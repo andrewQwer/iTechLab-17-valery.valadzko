@@ -6,10 +6,10 @@ import App from './App'
 import '../styles/app.css'
 import { AppContainer } from 'react-hot-loader'
 
-const state = configureStore();
+const store = configureStore();
 
 render(
-    <AppContainer><Provider store={state}>{App}</Provider></AppContainer>,
+    <AppContainer><Provider store={store}>{App}</Provider></AppContainer>,
     document.getElementById('root')
 )
 
@@ -17,7 +17,7 @@ if (module.hot) {
     module.hot.accept('./App', () => {
         const NextApp = require('./App').default;
         render(
-            <AppContainer><Provider store={state}>{NextApp}</Provider></AppContainer>,
+            <AppContainer><Provider store={store}>{NextApp}</Provider></AppContainer>,
             document.getElementById('root')
         );
     });

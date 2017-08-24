@@ -69,7 +69,7 @@ function mapDispatchToProps(dispatch) {
     return {
         getTickets: (page, limit) => {
             dispatch((dispatch) => {
-                axios.get(`http://localhost:3001/tickets?_page=${page}&_limit=${limit}`)
+                axios.get(`http://192.168.14.142:3001/tickets?_page=${page}&_limit=${limit}`)
                     .then(
                         response => {
                             console.log(page, limit);

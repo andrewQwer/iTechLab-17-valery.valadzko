@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form'
 import { FormInput } from 'Global/Components'
 import { numbers, required} from 'Global/FormCheck'
 
-const AddTicketsForm = ({ handleSubmit, pristine, reset, submitting }) => {
+const AddTicketsForm = ({ handleSubmit, pristine, reset, submitting, message }) => {
     return (
         <form className='cabinet__body__right__form' onSubmit={handleSubmit}>
             <Field name='name'
@@ -46,10 +46,11 @@ const AddTicketsForm = ({ handleSubmit, pristine, reset, submitting }) => {
                 <button className='cabinet__body__right__form__buttons-box__button submit' type='submit' disabled={submitting}>Submit</button>
                 <button className='cabinet__body__right__form__buttons-box__button clear' type='button' disabled={pristine || submitting} onClick={reset}>Clear</button>
             </div>
+            <div className='cabinet__body__right__form__message'>{ message }</div>
         </form>
     )
 };
 
 export default reduxForm({
-    form: 'addTicketsForm' // a unique identifier for this form
+    form: 'addTicketsForm'
 })(AddTicketsForm)
