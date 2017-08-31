@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "eslint-plugin-react": "^7.1.0",
     "express": "^4.15.3",
     "json-server": "^0.12.0",
+    "nodemon": "^1.11.0",
     "postcss-loader": "^2.0.6",
     "precss": "^2.0.0",
     "react-hot-loader": "^3.0.0-beta.7",
@@ -37,7 +39,9 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.25.0",
+    "body-parser": "^1.17.2",
     "history": "^4.6.3",
+    "mongodb": "^2.2.31",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
