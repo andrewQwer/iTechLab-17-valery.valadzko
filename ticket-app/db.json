@@ -53,15 +53,6 @@
       "email": "keqw@heqw.eqw",
       "access": "user",
       "id": 6
-    },
-    {
-      "username": "12345",
-      "password": "12345",
-      "firstname": "12345",
-      "secondname": "12345",
-      "email": "12345@mail.ro",
-      "access": "user",
-      "id": 7
     }
   ],
   "tickets": [
@@ -71,7 +62,7 @@
       "title": "Fearing that the actions of Superman are left unchecked, Batman takes on the Man of Steel, while the world wrestles with what kind of a hero it really needs.",
       "eventTime": "20.09.2017",
       "price": 5,
-      "count": 19,
+      "count": 7,
       "url": "https://upload.wikimedia.org/wikipedia/en/2/20/Batman_v_Superman_poster.jpg"
     },
     {

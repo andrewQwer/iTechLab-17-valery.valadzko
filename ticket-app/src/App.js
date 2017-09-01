@@ -7,7 +7,6 @@ import Login from 'Login/containers/LoginContainer'
 import UserCabinet from 'Cabinet/containers/CabinetContainer'
 import Cart from 'Cart/containers/CartContainer'
 import Home from 'Home/containers/Home'
-import Test from './test/containers/Test'
 
 export default (
         <BrowserRouter>
@@ -18,7 +17,6 @@ export default (
                     <Route exact path='/user' component={UserCabinet}/>
                     <Route exact path='/cart' component={Cart}/>
                     <Route exact path='/login' component={Login}/>
-                    <Route exact path='/test' component={Test}/>
                 </Nav>
         </BrowserRouter>
 )

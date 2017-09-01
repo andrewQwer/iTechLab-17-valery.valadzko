@@ -1,23 +1,30 @@
 import * as types from 'Tickets/actions/TicketsConst'
 import axios from 'axios'
 
-function getTickets(json) {
+function getTickets(tickets, currentPage, limit) {
     return {
         type: types.GET_TICKETS,
-        payload: json
+        payload: {
+            tickets: tickets,
+            currentPage: currentPage,
+            limit: limit
+        }
     }
 }
 
-export function fetchTickets() {
-    return function(dispatch) {
-        axios.get('http://192.168.14.142:3001/tickets')
+export const fetchTickets = (page, limit) => {
+    return (dispatch) => {
+        axios.get(limit === 'all' ? 'http://192.168.14.142:3001/tickets' : `http://192.168.14.142:3001/tickets?_page=${page}&_limit=${limit}`)
             .then(
                 response => {
-                    dispatch(getTickets(response.data))
+                    if (response.data.length === 0) {
+                        return null;
+                    }
+                    dispatch(getTickets(response.data, page, limit))
                 }
             )
             .catch(
                 error => console.log(error)
             )
     }
-}
+};

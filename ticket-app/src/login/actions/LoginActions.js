@@ -18,6 +18,7 @@ export function logInFailed() {
 }
 
 export function logOut() {
+
     return {
         type: types.LOG_OUT,
     }

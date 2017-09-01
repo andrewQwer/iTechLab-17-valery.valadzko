@@ -1,10 +1,20 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from 'react'
+import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logOut } from 'Login/actions/LoginActions'
 import { NavItem } from 'Nav/components/NavItem'
 
 class Nav extends Component {
+    constructor(props) {
+        super(props);
+        this.logOut = ::this.logOut;
+    }
+
+    logOut() {
+        this.props.logOut();
+        this.props.history.push('/');
+    }
+
     render() {
         return (
             <div className='app'>
@@ -26,11 +36,10 @@ class Nav extends Component {
                         }
                         {
                             this.props.isAuth ?
-                                <li className='navigation__item' onClick={this.props.logOut}>Log out</li>
+                                <li className='navigation__item' onClick={this.logOut}>Log out</li>
                                 :
                                 <NavItem value='Log in' addressTo='/login'/>
                         }
-                        <NavItem value='Test' addressTo='/test'/>
                     </ul>
                 </header>
                 {this.props.children}
@@ -48,9 +57,9 @@ function mapStateToProps(state) {
 const mapDispatchToProps = (dispatch) => {
     return {
         logOut: () => {
-            dispatch(logOut())
+            dispatch(logOut());
         }
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps, null, {pure: false})(Nav)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps, null, {pure: false})(Nav))
